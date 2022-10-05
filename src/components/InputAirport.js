@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { airfetch } from "./data";
 import useFetchAirport from "./useFetchAirport";
-
+import { SaerchAirportBar } from "./SearchAirportBar";
 
 function InputAirport() {
     const [city, setInputCity] = useState(null)
@@ -26,7 +26,7 @@ function InputAirport() {
     return (
         <div>
             <form onSubmit={handleInputCity}>
-                <input type="text" name="city" />
+                <SaerchAirportBar name="city" />
                 <button type="submit" >Cerca</button>
             </form>
             <Link to="/">Home</Link>

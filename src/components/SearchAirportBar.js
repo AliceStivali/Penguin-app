@@ -9,16 +9,34 @@ const styles = {
 
 
 
+let cityList = []
+
+airportList.forEach(e => { 
+  if (!cityList.includes(e.city)) {
+
+  cityList.push(e.city)
+
+  }
+});
+
+
+
 const listbox = [
   {
-    id: 'airports',
-    name: 'Airports',
+    id: 'name',
+    name: 'name',
     ratio: 2,
-    displayField: 'name, city',
-    data: airportList,
+    // displayField: 'name',
+    data: cityList,
     searchType: 'contains'
-  }
+  },
+
+  
 ];
+
+
+
+
 
 export function SaerchAirportBar() {
   return (
