@@ -1,3 +1,9 @@
+import { OffersContainer } from "./OffersContainer";
+import { Search } from "./Search";
+
 export function Home() {
-    return <div></div>
+    return <div className="h-screen flex flex-wrap justify-center items-center">
+        <Search />
+        <OffersContainer />
+    </div>
 }
