@@ -7,17 +7,17 @@ import App from "./App";
 const fetcher = (url) => fetch(url,{
     method:"GET",
     headers:{
-    "Authorization": "Bearer YYGH6PRpaQouTrqufPiNaAdHqmHk", //questa è la kay
+    "Authorization": "Bearer oJY6v9GlNQKXcNyMOg0qAlfs52AB", //questa è la kay
     },
     mode:"cors",
     catch:"default"
 }).then(responce=>responce.json())
- 
+
 function Root() {
-    return ( 
+    return (
         <SWRConfig value={{ fetcher }}>
         <BrowserRouter >
-        <App /> 
+        <App />
         </BrowserRouter>
         </SWRConfig>
      );

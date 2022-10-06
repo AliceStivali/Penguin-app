@@ -1,4 +1,5 @@
 // import { useState } from "react";
+import AutoCompleteInput from "./AutoCompleteInput";
 import { SaerchAirportBar } from "./SearchAirportBar";
 
 function SearchFly() {
@@ -20,7 +21,7 @@ function SearchFly() {
     //     adult:""
     // })
     // const [ arrivalData, setArrivalData] = useState({})
-    
+
     // function handleReturn(event) {
     //     setFlyData({return: event.target.checked})
     // }
@@ -36,9 +37,9 @@ function SearchFly() {
     //         dateReturn: event.target.elements.dateReturn.value
     //     })
     //     setDepartData({})
-        
+
     // }
-    
+
     // return ( <div>
     //         <form onSubmit={handleSearchFly}>
     //             <input type="text" name="depart" placeholder="Partenza"/>
@@ -54,6 +55,7 @@ function SearchFly() {
     return (
         <div>
             <SaerchAirportBar/>
+            <AutoCompleteInput/>
         </div>
     )
 }

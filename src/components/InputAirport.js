@@ -1,32 +1,47 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { airfetch } from "./data";
 import useFetchAirport from "./useFetchAirport";
-import { SaerchAirportBar } from "./SearchAirportBar";
+import { Autocomplete, TextField } from '@mui/material';
+import airportList from "./data";
+
+let cityList = []
+
+airportList.forEach(e => {
+    if (!cityList.includes(e.city)) {
+
+        cityList.push(e.city)
+
+    }
+});
 
 function InputAirport() {
     const [city, setInputCity] = useState(null)
-    // const [data, setData] = useState([])
+    const [value, setValue] = useState("")
     const { list, error, loading } = useFetchAirport(city)
-
-    // useEffect(() => {
-    //     if (city !== "") {
-    //         setData(list.data)
-
-    //     }
-    // }, [city])
 
     function handleInputCity(event) {
         event.preventDefault()
-        setInputCity(event.target.elements.city.value)
-
+        setInputCity(value)
+        console.log(city);
     }
+
+
+
+
 
     console.log(list);
     return (
         <div>
             <form onSubmit={handleInputCity}>
-                <SaerchAirportBar name="city" />
+                <Autocomplete
+                    freeSolo
+                    onChange={(event, value) => setValue(value)}
+                    options={cityList}
+                    style={{ width: 300 }}
+                    renderInput={params => (
+                        <TextField {...params} label="Search city" variant="outlined" fullWidth />
+                    )}
+                />
                 <button type="submit" >Cerca</button>
             </form>
             <Link to="/">Home</Link>
@@ -42,7 +57,7 @@ function InputAirport() {
                     ))}
                 </ul>
             )}
-            <Outlet/>
+            <Outlet />
         </div>
     )
 }
