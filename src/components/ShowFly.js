@@ -3,13 +3,17 @@ import { useParams } from "react-router-dom";
 import useFetchFlay from "./useFetchFly";
 
 function ShowFly() {
-    const [date, setDate] = useState(null)
-    const { iataCode, toIataCode } = useParams()
-    const { flyList, error, flyLoading } = useFetchFlay(iataCode, toIataCode, date)
+    const [date, setDate] = useState(null);
+    const { iataCode, toIataCode } = useParams();
+    const { flyList, error, flyLoading } = useFetchFlay(
+        iataCode,
+        toIataCode,
+        date
+    );
 
     function handleInputDate(event) {
-        event.preventDefault()
-        setDate(event.target.elements.date.value)
+        event.preventDefault();
+        setDate(event.target.elements.date.value);
     }
 
     console.log(flyList);
@@ -25,9 +29,8 @@ function ShowFly() {
             {flyList && (
                 <div>
                     <h2> Voli trovati: {flyList.meta.count}</h2>
-                    </div>
+                </div>
             )}
-
         </div>
     );
 }

@@ -54,10 +54,9 @@ function SearchFly() {
 
     return (
         <div>
-            <SaerchAirportBar/>
+            <SaerchAirportBar />
         </div>
-    )
+    );
 }
-
 
 export default SearchFly;
