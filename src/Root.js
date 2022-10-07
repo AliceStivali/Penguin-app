@@ -7,7 +7,7 @@ import App from "./App";
 const fetcher = (url) => fetch(url,{
     method:"GET",
     headers:{
-    "Authorization": "Bearer oJY6v9GlNQKXcNyMOg0qAlfs52AB", //questa è la kay
+    "Authorization": "Bearer 6My8Ij6sBDf84AYjU76ghSnCbAeg", //questa è la kay
     },
     mode:"cors",
     catch:"default"

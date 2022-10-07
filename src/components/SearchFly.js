@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import AutoCompleteInput from "./AutoCompleteInput";
+
 import { SaerchAirportBar } from "./SearchAirportBar";
 
 function SearchFly() {
@@ -55,7 +55,6 @@ function SearchFly() {
     return (
         <div>
             <SaerchAirportBar/>
-            <AutoCompleteInput/>
         </div>
     )
 }
