@@ -4,15 +4,10 @@ import useFetchAirport from "./useFetchAirport";
 import { Autocomplete, TextField } from '@mui/material';
 import airportList from "./data";
 
-let cityList = []
 
-airportList.forEach(e => {
-    if (!cityList.includes(e.city)) {
-
-        cityList.push(e.city)
-
-    }
-});
+const cityList = airportList.map(item => {
+    return {city: item.city, country: item.country}
+})
 
 function InputAirport() {
     const [city, setInputCity] = useState(null)
@@ -25,10 +20,6 @@ function InputAirport() {
         console.log(city);
     }
 
-
-
-
-
     console.log(list);
     return (
         <div>
@@ -36,7 +27,9 @@ function InputAirport() {
                 <Autocomplete
                     freeSolo
                     onChange={(event, value) => setValue(value)}
-                    options={cityList}
+                    options={cityList.sort((a, b) => -b.country.localeCompare(a.country))}
+                    groupBy={(option) => option.country}
+                    getOptionLabel={(option) => option.city}
                     style={{ width: 300 }}
                     renderInput={params => (
                         <TextField {...params} label="Search city" variant="outlined" fullWidth />
