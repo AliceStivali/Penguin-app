@@ -7,7 +7,7 @@ const fetcher = (url) =>
     fetch(url, {
         method: "GET",
         headers: {
-            Authorization: "Bearer dVlZsoaNXftTcZwAQIlSv0jKu3jH", //questa è la kay
+            Authorization: "Bearer Z3KFxLmsMLlrld7a1uJujV0zhGIe", //questa è la kay
         },
         mode: "cors",
         catch: "default",
@@ -24,4 +24,3 @@ function Root() {
 }
 
 export default Root;
-
