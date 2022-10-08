@@ -1,7 +1,5 @@
 // import { useState } from "react";
 
-import { SaerchAirportBar } from "./SearchAirportBar";
-
 function SearchFly() {
     // const { list, error, loading } = useFetchAirport(city)
     // const { desinationList, destinationError, destinationLoading } = useFatchDesination(iataCode)
@@ -52,11 +50,7 @@ function SearchFly() {
     //         </form>
     // </div> );
 
-    return (
-        <div>
-            <SaerchAirportBar />
-        </div>
-    );
+    return <div></div>;
 }
 
 export default SearchFly;
