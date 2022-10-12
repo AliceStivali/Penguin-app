@@ -1,8 +1,9 @@
-import { Home } from "./components/first page/Home";
-
+import { TouristInfo } from "./components/second page/TouristInfo";
 
 export function App() {
-    return <div>
-        <Home />
+  return (
+    <div>
+      <TouristInfo />
     </div>
+  );
 }
