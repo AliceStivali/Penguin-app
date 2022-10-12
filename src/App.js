@@ -1,8 +1,9 @@
-import { Home } from "./components/first page/Home";
-
+import { HomeSearch } from "./components/second page/HomeSearch";
 
 export function App() {
-    return <div>
-        <Home />
+  return (
+    <div>
+      <HomeSearch />
     </div>
+  );
 }
