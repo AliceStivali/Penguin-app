@@ -3,7 +3,7 @@ import useSWR from 'swr'
 
 export function Weather() {
     
-const city = 'Roma'
+const city = 'Bologna'
 const api = 'fd8dfe68dddae8242051d12f28167f50';
 const fetcher = (url) => fetch(url).then(res=> res.json()) 
 const {data, error} = useSWR( `https://api.openweathermap.org/data/2.5/weather?q=
@@ -25,24 +25,26 @@ useEffect(() => {
 }
 }, [data]) 
 
+console.log(data)
 
 return ((
         weather && 
                 <div className="flex justify-center items-center"><div>
-                    {data && <h2 style={{marginTop:'2rem',marginBottom:'0.2rem',color: 'white', fontSize: '2rem', textAlign: 'center'}}>{`${city}`}</h2>} 
+                    {data && <h2 className='weather_city'><b>{`${city}`}</b></h2>} 
                 <div className="flex gap-x-7 justify-center items-center">
-                    {weather === 'Clear' && <img width='250px' src='./meteo/sun/6.png' alt="" /> }
-                    {weather === 'Rain'  && <img width='200px' src='./meteo/cloud/7.png' alt="" />}
+                    {weather === 'Clear' && <img width='200px' src='./meteo/sun/6.png' alt="" /> }
+                    {weather === 'Rain'  && <img width='250px' src='./meteo/cloud/7.png' alt="" />}
+                    {weather === 'Fog'  && <img width='250px' src='./meteo/cloud/5.png' alt="" />}
                     {weather === 'Thunderstorm'  && <img width='150px' src='./meteo/sun/16.png' alt="" />}
-                    {weather === 'Clouds' && <img width='250px' src='./meteo/cloud/35.png' alt="" />}
+                    {weather === 'Clouds' && <img width='200px' src='./meteo/cloud/32.png' alt="" />}
                     {weather === 'Mist'  && <img width='250px' src='./meteo/cloud/35.png' alt="" />}
                     {weather === 'Snow'  && <img width='250px' src='./meteo/cloud/18.png' alt="" />}
                 </div>
                 <div className="flex gap-x-7 justify-end ">
-                    <p style={{ color: 'white', marginRight:'3rem', fontSize:'3rem'}}>{`${temp}°`}</p>
+                    <p className='weather_temp'>{`${temp}°`}</p>
                 <div style={{ color: 'white',}}>
-                    <p style={{ color: '#9A2A2A',fontSize: '1.3rem'}}><b>{`${tempMax}°`}</b></p>
-                    <p style={{ color: '#99CCCC'}}>{`${tempMin}°`}</p> 
+                    <p className="weather_max"><b>{`${tempMax}°`}</b></p>
+                    <p className='weather_min'> <b>{`${tempMin}°`}</b></p> 
                 </div>
             </div>
         </div> 
