@@ -5,7 +5,7 @@ const fetcher = (url) =>
   fetch(url, {
     method: "GET",
     headers: {
-      Authorization: "Bearer UA5gbhoM1POsGfyMpskf6ABgsl1j", //questa è la kay
+      Authorization: "Bearer FSjncjPiKqLxvjoMpLAeQ9fLUk4q", //questa è la kay
     },
     mode: "cors",
     catch: "default",
@@ -21,6 +21,7 @@ function useFetchTour() {
     `https://test.api.amadeus.com/v1/shopping/activities?latitude=41.397158&longitude=2.160873&radius=20`,
     fetcher
   );
+  console.log(data);
 
   return {
     tourData: data,

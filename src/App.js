@@ -1,9 +1,9 @@
-import { TouristInfo } from "./components/second page/TouristInfo";
+import { HomeSearch } from "./components/second page/HomeSearch";
 
 export function App() {
   return (
     <div>
-      <TouristInfo />
+      <HomeSearch />
     </div>
   );
 }
