@@ -1,7 +1,14 @@
+:root {
+  --penguinOrange: #ff900d;
+  --penguinWhite: rgb(239, 236, 236);
+  --penguinLightBlue: #d3eaff;
+  --penguinRedGradient: linear-gradient(#e83a3a, #ff5e03);
+  --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
+}
+
 /* Alice start */
 .tourist-info {
   margin: 20px;
-  color: white;
+  color: var(--penguinWhite);
 }
-
 /* Alice end */
