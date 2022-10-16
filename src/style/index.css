@@ -9,8 +9,20 @@
 
   /* news */
 
-  .list-style {
+  .news-list-style {
     list-style: none;
     color: white;
+  }
+
+  .news-container {
+    display: flex;
+    justify-content: center;
+    width: 255px;
+    height: 100px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: 1rem;
   }
 
