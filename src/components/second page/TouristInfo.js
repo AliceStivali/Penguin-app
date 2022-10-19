@@ -1,34 +1,57 @@
 import { useState } from "react";
-import useFetchTour from "./useFetchTour";
+// import useFetchTour from "./useFetchTour";
+import tourData from "./tourData";
 
 export function TouristInfo() {
   const [index, setIndex] = useState(0);
 
-  function changeIndex() {
+  function changeIndexForward() {
     if (tourData) {
       setIndex(index + 1);
     }
   }
+  function changeIndexBack() {
+    if (index !== 0) {
+      setIndex(index - 1);
+    }
+  }
 
-  const { tourData, tourError, tourLoading } = useFetchTour();
+  // const { tourData, tourError, tourLoading } = useFetchTour();
   return (
     <div className="tourist-info">
-      {tourLoading && <h3>Caricamento...</h3>}
-      {tourError && <h3> C'è stato un errore</h3>}
+      {/* {tourLoading && <h3>Caricamento...</h3>}
+      {tourError && <h3> C'è stato un errore</h3>} */}
       {tourData && (
         <div>
           <h2>{tourData.data[index].name}</h2>
           <img
             src={tourData.data[index].pictures[0]}
             alt=""
-            style={{ width: "fit-content" }}
+            className="tour-data-img"
           />
-          <button>
-            <a href={tourData.data[index].bookingLink}>Book</a>
-          </button>
+          <div className="tourist-card-buttons">
+            <button className="card-book-button">
+              <a href={tourData.data[index].bookingLink}>Book</a>
+            </button>
+            <div className="tourist-arrow-btn-container">
+              {index !== 0 && (
+                <button
+                  onClick={changeIndexBack}
+                  className="arrow-button tourist-arrow"
+                >
+                  ◀
+                </button>
+              )}
+              <button
+                onClick={changeIndexForward}
+                className="arrow-button tourist-arrow"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
         </div>
       )}
-      <button onClick={changeIndex}>></button>
     </div>
   );
 }

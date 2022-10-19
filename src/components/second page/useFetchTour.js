@@ -5,7 +5,7 @@ const fetcher = (url) =>
   fetch(url, {
     method: "GET",
     headers: {
-      Authorization: "Bearer FSjncjPiKqLxvjoMpLAeQ9fLUk4q", //questa è la kay
+      Authorization: "Bearer 1UNUzBT0wJqe59gyqXN9CMEk1PEh", //questa è la kay
     },
     mode: "cors",
     catch: "default",

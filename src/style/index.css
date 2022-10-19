@@ -8,7 +8,35 @@
 
 /* Alice start */
 .tourist-info {
-  margin: 20px;
+  margin: 2rem;
   color: var(--penguinWhite);
+  word-wrap: break-word;
+}
+.tour-data-img {
+  width: fit-content;
+  height: 200px;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+.tourist-card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.tourist-arrow-btn-container {
+  display: flex;
+}
+
+.arrow-button {
+  background-color: var(--penguinWhite);
+  color: black;
+  padding: 0 10px;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.card-book-button {
+  background-color: var(--penguinOrange);
+  border-radius: 3px;
+  padding: 5px 10px;
 }
 /* Alice end */
