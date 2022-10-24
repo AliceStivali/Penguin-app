@@ -7,6 +7,9 @@
   --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
 }
 
+
+
+
 /* home-background-francesca */
 .home-background {
   background: var(--penguinLightBlueGrad);
@@ -55,19 +58,11 @@
   display: flex;
 }
 
-.arrow-button {
-  background-color: var(--penguinWhite);
-  color: black;
-  padding: 0 10px;
-  border-radius: 3px;
-  margin: 5px;
-}
-
 /* news-francesca */
 
 
 
-  /* ivan start */
+/* ivan start */
 
   .weather_city {
     margin-top: 2rem;
@@ -154,3 +149,40 @@
 }
 
 /* ivan end */
+
+
+/* Alice start */
+.tourist-info {
+  margin: 2rem;
+  color: var(--penguinWhite);
+  word-wrap: break-word;
+}
+.tour-data-img {
+  width: fit-content;
+  height: 200px;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+.tourist-card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.tourist-arrow-btn-container {
+  display: flex;
+}
+
+.arrow-button {
+  background-color: var(--penguinWhite);
+  color: black;
+  padding: 0 10px;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.card-book-button {
+  background-color: var(--penguinOrange);
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+/* Alice end */
