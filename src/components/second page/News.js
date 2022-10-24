@@ -6,11 +6,17 @@ export function News() {
     const { data, error, loading, articlesNumber } = useFetchNews()
      const [i, setI] = useState(0)
 
-    function changeIndex() {
+    function changeIndexForward() {
         if (i + 2 <= articlesNumber) {
           setI(i+ 2);
         }
       }
+
+    function changeIndexBackwards() {
+        if(i !== 0) {
+            setI(i - 1)
+        } 
+    }
 
     console.log(data)
     console.log(articlesNumber)
@@ -22,20 +28,27 @@ export function News() {
 
             {data && 
                         <div> 
+                            <p style={{paddingLeft: '5rem', paddingTop: '0.7rem'}}>What's new in {data.user_input.q}</p>
                         <div className="news-container" key={(data.articles[i].title)}>
-                            <p style={{color:'black', paddingLeft:'0.7rem', paddingTop:'1rem'}}>{data.articles[i].title}</p>
+                            <p style={{color:'black', paddingLeft:'0.5rem', paddingTop:'0.5rem'}}>{data.articles[i].title}</p>
                         </div>
              </div> }    
              {data && i + 1 < articlesNumber &&
                         <div> 
                         <div className="news-container" key={(data.articles[i].title)}>
-                            <p style={{color:'black', paddingLeft:'0.7rem', paddingTop:'1rem'}}>{data.articles[i + 1].title}</p>
+                            <p style={{color:'black', paddingLeft:'0.5rem', paddingTop:'0.5rem'}}>{data.articles[i + 1].title}</p>
                         </div>
              </div> }          
-      
-            <div>
-                <button onClick={changeIndex}> switch </button>
+            
+            <div className="news-card-buttons">
+            <div className="news-arrow-btn-container">
+                {i !== 0 && (
+                        <button className="arrow-button" onClick={changeIndexBackwards}> ◀ </button>
+                    )}
+                    <button className="arrow-button" onClick={changeIndexForward}> ▶ </button>
+                    
             </div>
-        </div>
+            </div>
+       </div> 
     )
 }

@@ -1,32 +1,65 @@
 :root {
-    --penguinOrange: #ff900d;
-    --penguinWhite: rgb(239, 236, 236);
-    --penguinLightBlue: #d3eaff;
-    --penguinRedGradient: linear-gradient(#e83a3a, #ff5e03);
-    --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
-  }
+  --penguinOrange: #ff900d;
+  --penguinWhite: rgb(239, 236, 236);
+  --penguinLightBlue: #d3eaff;
+  --penguinRedGradient: linear-gradient(#e83a3a, #ff5e03);
+  --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
+}
+
+/* home-background */
+.home-background {
+  background: var(--penguinLightBlueGrad);
+  /* background-image: url("public/fjord-img.jpeg"); */
+}
+
+/* home-background */
 
 
-  /* news */
+/* news */
 
-  .news-list-style {
-    list-style: none;
-    color: white;
-  }
+.news-list-style {
+  list-style: none;
+  color: white;
+}
 
-  .news-container {
-    display: flex;
-    justify-content: center;
-    width: 255px;
-    height: 100px;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 3rem;
-    background-color: white;
-    border-radius: 1rem;
-    background-color: #d3eaff;
-  }
+.news-container {
+  display: flex;
+  justify-content: center;
+  width: 260px;
+  height: 110px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1.7rem;
+  background-color: white;
+  border-radius: 5px;
+  background-color: var(--penguinLightBlue);
+}
 
-    /* news */
+.news-button {
+  width: 33px;
+  height: 30px;
+  left: 868px;
+  top: 1867px;
+  background-color: white;
+}
 
+.news-card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  margin-top: 1.2rem;
+}
 
+.news-arrow-btn-container {
+  display: flex;
+}
+
+.arrow-button {
+  background-color: var(--penguinWhite);
+  color: black;
+  padding: 0 10px;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+/* news */
