@@ -6,16 +6,16 @@
   --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
 }
 
-/* home-background */
+/* home-background-francesca */
 .home-background {
   background: var(--penguinLightBlueGrad);
   /* background-image: url("public/fjord-img.jpeg"); */
 }
 
-/* home-background */
+/* home-background-francesca */
 
 
-/* news */
+/* news-francesca */
 
 .news-list-style {
   list-style: none;
@@ -62,4 +62,5 @@
   margin: 5px;
 }
 
-/* news */
+/* news-francesca */
+
