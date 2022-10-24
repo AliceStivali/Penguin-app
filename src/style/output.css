@@ -589,6 +589,11 @@ video {
   width: 20rem;
 }
 
+.min-w-max {
+  min-width: -webkit-max-content;
+  min-width: max-content;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -625,5 +630,11 @@ video {
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
 }
 
