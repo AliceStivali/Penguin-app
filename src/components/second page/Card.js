@@ -4,4 +4,3 @@ export function Card(props) {
       {props.children}
     </div>
   );
-}
