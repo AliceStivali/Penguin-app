@@ -1,14 +1,18 @@
-
 :root {
-  --penguinOrange: #ff900d;
+  --penguinOrange: #fa896c;
   --penguinWhite: rgb(239, 236, 236);
   --penguinLightBlue: #d3eaff;
   --penguinRedGradient: linear-gradient(#e83a3a, #ff5e03);
   --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
 }
 
-
-
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
 
 /* home-background-francesca */
 .home-background {
@@ -17,7 +21,6 @@
 }
 
 /* home-background-francesca */
-
 
 /* news-francesca */
 
@@ -60,42 +63,40 @@
 
 /* news-francesca */
 
-
-
 /* ivan start */
 
-  .weather_city {
-    margin-top: 2rem;
-    margin-bottom: 0.2rem;
-    color: var(--penguinWhite);
-    font-size: 2rem;
-    text-align: center;
-    background: linear-gradient(white,rgb(65, 65, 243));
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
+.weather_city {
+  margin-top: 2rem;
+  margin-bottom: 0.2rem;
+  color: var(--penguinWhite);
+  font-size: 2rem;
+  text-align: center;
+  background: linear-gradient(white, rgb(65, 65, 243));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .weather_temp {
-    font-size: 3rem;
-    color: var(--penguinWhite);
-    margin-right: 3rem;
+  font-size: 3rem;
+  color: var(--penguinWhite);
+  margin-right: 3rem;
 }
 
 .weather_max {
-    color: #e83a3a;
-    font-size: 1.2rem;
+  color: #e83a3a;
+  font-size: 1.2rem;
 }
 
-.weather_min{
-    color: rgb(65, 65, 243)
+.weather_min {
+  color: rgb(65, 65, 243);
 }
 
 .first_page_cards {
   font-family: helvetica;
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
-  background: -webkit-linear-gradient(#3B8BD4, #D3B1B1);
+  background: -webkit-linear-gradient(#3b8bd4, #d3b1b1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -123,7 +124,7 @@
   font-size: 1.3rem;
 }
 
-.price_card span{
+.price_card span {
   font-size: 0.9rem;
 }
 
@@ -133,23 +134,26 @@
 }
 
 .discount_card {
-  background: linear-gradient(90deg, rgb(218, 56, 53) 14.13%, rgb(249, 112, 13) 85.87%);
+  background: linear-gradient(
+    90deg,
+    rgb(218, 56, 53) 14.13%,
+    rgb(249, 112, 13) 85.87%
+  );
   width: 2.5rem;
   height: 1rem;
   border-radius: 0.5rem;
   font-size: 12px;
-  text-align:  center;
+  text-align: center;
 }
 
 .main_card_pic {
- height: 7rem;
+  height: 7rem;
   width: 10rem;
   margin-right: 0.5rem;
   border-radius: 1rem 5rem 1rem 1rem;
 }
 
 /* ivan end */
-
 
 /* Alice start */
 .tourist-info {
@@ -183,6 +187,41 @@
   background-color: var(--penguinOrange);
   border-radius: 3px;
   padding: 5px 10px;
+  color: var(--penguinWhite);
 }
 
 /* Alice end */
+
+/* Flights */
+
+.flights-header {
+  color: var(--penguinWhite);
+  margin-bottom: 0.5rem;
+}
+.flights-container {
+  padding: 1rem 2rem 2rem;
+}
+.single-flight-container {
+  background-color: var(--penguinLightBlue);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+}
+.flights-departure {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+.flights-arrival {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+.flight-details {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

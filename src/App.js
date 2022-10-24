@@ -1,14 +1,9 @@
-import { Home } from "./components/first page/Home";
-import {CardContainer} from './components/second page/CardContainer'
-
-
+import { Flights } from "./components/second page/Flights";
 
 export function App() {
-    return <div>
-        <Home />
-        {/* <Home /> */}
-        <CardContainer />
-
+  return (
+    <div>
+      <Flights />
     </div>
-
+  );
 }
