@@ -1,3 +1,4 @@
+
 :root {
   --penguinOrange: #ff900d;
   --penguinWhite: rgb(239, 236, 236);
@@ -64,3 +65,92 @@
 
 /* news-francesca */
 
+
+
+  /* ivan start */
+
+  .weather_city {
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+    color: var(--penguinWhite);
+    font-size: 2rem;
+    text-align: center;
+    background: linear-gradient(white,rgb(65, 65, 243));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.weather_temp {
+    font-size: 3rem;
+    color: var(--penguinWhite);
+    margin-right: 3rem;
+}
+
+.weather_max {
+    color: #e83a3a;
+    font-size: 1.2rem;
+}
+
+.weather_min{
+    color: rgb(65, 65, 243)
+}
+
+.first_page_cards {
+  font-family: helvetica;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  background: -webkit-linear-gradient(#3B8BD4, #D3B1B1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.first_page_cards {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.container_first_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.price_card_container {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+.price_card {
+  font-size: 1.3rem;
+}
+
+.price_card span{
+  font-size: 0.9rem;
+}
+
+.date_card {
+  margin-top: 1.5rem;
+  font-size: 0.6rem;
+}
+
+.discount_card {
+  background: linear-gradient(90deg, rgb(218, 56, 53) 14.13%, rgb(249, 112, 13) 85.87%);
+  width: 2.5rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  font-size: 12px;
+  text-align:  center;
+}
+
+.main_card_pic {
+ height: 7rem;
+  width: 10rem;
+  margin-right: 0.5rem;
+  border-radius: 1rem 5rem 1rem 1rem;
+}
+
+/* ivan end */
