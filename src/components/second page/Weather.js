@@ -3,13 +3,13 @@ import useSWR from 'swr'
 
 export function Weather() {
     
-const city = 'Bologna'
+const city = 'Genova'
 const api = 'fd8dfe68dddae8242051d12f28167f50';
 const fetcher = (url) => fetch(url).then(res=> res.json()) 
 const {data, error} = useSWR( `https://api.openweathermap.org/data/2.5/weather?q=
 ${city}&units=metric&appid=
 ${api}`, fetcher)
-error && console.error('Error');
+error && console.error(alert('Fetch Error'));
 
 const [weather, setWeather] = useState('')
 const [tempMin, setTempMin] = useState('')
@@ -25,7 +25,6 @@ useEffect(() => {
 }
 }, [data]) 
 
-console.log(data)
 
 return ((
         weather && 
