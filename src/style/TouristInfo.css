@@ -1,0 +1,18 @@
+.tourist-info {
+  margin: 2rem;
+  color: var(--penguinWhite);
+  word-wrap: break-word;
+}
+.tour-data-img {
+  width: fit-content;
+  height: 200px;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+.tourist-card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.tourist-arrow-btn-container {
+  display: flex;
+}

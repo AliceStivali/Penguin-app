@@ -1,0 +1,31 @@
+.flights-header {
+  color: var(--penguinWhite);
+  margin-bottom: 0.5rem;
+}
+.flights-container {
+  padding: 1rem 2rem 2rem;
+}
+.single-flight-container {
+  background-color: var(--penguinLightBlue);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+}
+.flights-departure {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+.flights-arrival {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+.flight-details {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

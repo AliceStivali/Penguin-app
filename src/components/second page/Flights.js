@@ -1,4 +1,5 @@
 import data from "./flyData";
+import "../../style/Flights.css";
 
 const dep = data.itineraries[0].segments[0].departure;
 const arr = data.itineraries[0].segments[0].arrival;

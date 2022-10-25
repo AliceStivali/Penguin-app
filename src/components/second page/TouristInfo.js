@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import useFetchTour from "./useFetchTour";
 import tourData from "./tourData";
+import "../../style/TouristInfo.css";
 
 export function TouristInfo() {
   const [index, setIndex] = useState(0);
@@ -23,7 +24,7 @@ export function TouristInfo() {
       {tourError && <h3> C'è stato un errore</h3>} */}
       {tourData && (
         <div>
-          <h2>{tourData.data[index].name}</h2>
+          <h6>{tourData.data[index].name}</h6>
           <img
             src={tourData.data[index].pictures[0]}
             alt=""
