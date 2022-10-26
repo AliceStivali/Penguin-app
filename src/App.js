@@ -1,10 +1,10 @@
-import { CardContainer } from "./components/second page/CardContainer";
-import { Flights } from "./components/second page/Flights";
+import InputAirport from "./components/first page/InputAirport";
+
 
 export function App() {
   return (
     <div>
-      <CardContainer />
+      <InputAirport />
     </div>
   );
 }
