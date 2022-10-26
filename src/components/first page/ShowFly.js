@@ -2,19 +2,18 @@ import { useState } from "react";
 import useFetchFly from "./useFetchFly";
 
 function ShowFly(data, toIataCode) {
-  const [arrival, setArrival] = useState(null);
+
+
   const [date, setDate] = useState(null);
   const { flyList, error, flyLoading } = useFetchFly(
     data.data.iataCode,
-    arrival,
+    data.toIataCode.iataCode,
     date
   );
   console.log(data);
-  console.log(toIataCode);
-//   console.log(flyList);
-//   if (data.toIataCode != null) {
-//     setArrival(data.toIataCode);
-//   }
+  console.log(data.toIataCode);
+
+
   function handleInputDate(event) {
     event.preventDefault();
     setDate(event.target.elements.date.value);
