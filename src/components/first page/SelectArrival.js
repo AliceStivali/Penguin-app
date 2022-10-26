@@ -1,6 +1,7 @@
 
 import { Autocomplete, TextField } from "@mui/material";
 import { useState } from "react";
+import ShowFly from "./ShowFly";
 import useFetchDesination from "./useFetchDestination";
 
 function getUniqueListBy(arr, key) {
@@ -14,7 +15,7 @@ function SelectArrival(iataCode) {
   if (desinationList) {
     destinationCityList = getUniqueListBy(desinationList.data, "name");
   }
-  console.log(desinationList);
+
   return (
     <div>
       <Autocomplete
@@ -25,6 +26,7 @@ function SelectArrival(iataCode) {
         sx={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="Arrival" />}
       />
+    <ShowFly data={iataCode} toIataCode={arrival}/>
     </div>
   );
 }

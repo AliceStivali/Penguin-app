@@ -1,5 +1,6 @@
 import useSWR from "swr";
 
+
 const fetcher = (url) =>
     fetch(url, {
         method: "GET",
@@ -10,18 +11,18 @@ const fetcher = (url) =>
         catch: "default",
     }).then((responce) => responce.json());
 
-function useFetchAirport(city) {
+function useFetchFly(iataCode, toIataCOde, date) {
     const { data, error } = useSWR(
-        city
-            ? `https://test.api.amadeus.com/v1/reference-data/locations?subType=AIRPORT&keyword=${city}&page%5Blimit%5D=10&page%5Boffset%5D=0&sort=analytics.travelers.score&view=LIGHT`
+        date
+            ? `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${iataCode}&destinationLocationCode=${toIataCOde}&departureDate=${date}&adults=1&nonStop=false&max=250`
             : null, fetcher
     );
 
     return {
-        list: data,
+        flyList: data,
         error: error,
-        loading: !data && !error,
+        flyLoading: !data && !error,
     };
 }
 
-export default useFetchAirport;
+export default useFetchFly;

@@ -14,7 +14,7 @@ function SelectAirport(city) {
   if (list) {
     destinationList=getUniqueListBy(list.data, "name")
   }
-  console.log(partenza);
+
   return (
     <div>
       <Autocomplete
