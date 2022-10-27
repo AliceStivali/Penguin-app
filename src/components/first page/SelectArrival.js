@@ -21,7 +21,7 @@ function SelectArrival({iataCode}) {
       <Autocomplete
         onChange={(event, value) => setArrival(value)}
         disablePortal
-        options={destinationCityList.sort((a, b) => -b.name.localeCompare(a.name))}
+        options={destinationCityList.sort((a, b) => -b.name.localeCompare(a.countryName))}
         getOptionLabel={(option) => option.name}
         sx={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="Arrival" />}

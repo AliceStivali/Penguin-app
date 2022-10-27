@@ -2,33 +2,21 @@ import { useState } from "react";
 // import { Link, Outlet } from "react-router-dom";
 import { Autocomplete, TextField } from "@mui/material";
 import airportList from "./data";
-import SelectAirport from "./SelectAirport";
-
-function getUniqueListBy(arr, key) {
-  return [...new Map(arr.map((item) => [item[key], item])).values()];
-}
-
-const cityList = getUniqueListBy(airportList, "city");
+import SelectArrival from "./SelectArrival";
+;
 
 
 function InputAirport() {
-    const [city, setInputCity] = useState(null);
-    const [value, setValue] = useState("");
-
-    function handleInputCity(event) {
-        event.preventDefault();
-        setInputCity(value);;
-  }
+    const [iata_code, setCityIataCode] = useState(null);
 
   return (
     <div>
-      <form onSubmit={handleInputCity}>
         <Autocomplete
           freeSolo
-          onChange={(event, value) => setValue(value.city)}
-          options={cityList.sort((a, b) => -b.country.localeCompare(a.country))}
+          onChange={(event, value) => setCityIataCode(value.iata_code)}
+          options={airportList.sort((a, b) => -b.country.localeCompare(a.country))}
           groupBy={(option) => option.country}
-          getOptionLabel={(option) => option.city}
+          getOptionLabel={(option) => `${option.name},${option.city}`}
           style={{ width: 300 }}
           renderInput={(params) => (
             <TextField
@@ -39,9 +27,7 @@ function InputAirport() {
             />
           )}
         />
-        <button type="submit">Cerca</button>
-      </form>
-      <SelectAirport city={city}/>
+      <SelectArrival  iataCode={iata_code}/>
     </div>
   );
 }
