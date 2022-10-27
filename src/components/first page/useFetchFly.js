@@ -5,17 +5,17 @@ const fetcher = (url) =>
     fetch(url, {
         method: "GET",
         headers: {
-            Authorization: "Bearer S6LgLecDVgMT2Zg8C7fA1hUgTRLv", //questa è la kay
+            Authorization: "Bearer ZzswkHT6tqiMzpcEWE1hFxvhSqPC", //questa è la kay
         },
         mode: "cors",
         catch: "default",
     }).then((responce) => responce.json());
 
-function useFetchFly(iataCode, toIataCOde, date) {
+function useFetchFly(iataCode, toIataCode, flyData) {
     const { data, error } = useSWR(
-        date
-            ? `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${iataCode}&destinationLocationCode=${toIataCOde}&departureDate=${date}&adults=1&nonStop=false&max=250`
-            : null, fetcher
+        !flyData.return && flyData.date
+            ? `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${iataCode}&destinationLocationCode=${toIataCode}&departureDate=${flyData.date}&adults=${flyData.adult}&children=${flyData.child}&nonStop=true&max=10`
+            : flyData.return && flyData.dateReturn ?  `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${iataCode}&destinationLocationCode=${toIataCode}&departureDate=${flyData.date}&returnDate=${flyData.dateReturn}&adults=${flyData.adult}&children=${flyData.child}&nonStop=true&max=5`: null, fetcher
     );
 
     return {
