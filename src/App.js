@@ -1,10 +1,10 @@
-import { Flights } from "./components/second page/Flights";
-import { ReducedSearch } from "./components/second page/ReducedSearch";
+import InputAirport from "./components/first page/InputAirport";
+
 
 export function App() {
   return (
     <div>
-      <Flights />
+      <InputAirport />
     </div>
   );
 }
