@@ -1,0 +1,36 @@
+.RS-container {
+  background-color: black;
+  opacity: 85%;
+  border-radius: 33px;
+  display: flex;
+  padding: 1rem;
+  width: 70%;
+  justify-content: center;
+}
+.input-field {
+  background-color: var(--penguinWhite);
+  padding: 5px 20px;
+  margin-right: 1px;
+}
+.RS-input-1 {
+  border-radius: 18px 0 0 18px;
+}
+.RS-input-2 {
+  border-radius: 0 18px 0 0;
+}
+.RS-input-3 {
+  border-radius: 18px 0 0 0;
+}
+.RS-input-4 {
+  border-radius: 0 18px 0 0;
+}
+.RS-input-5 {
+  border-radius: 18px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+.RS-input-6 {
+  border-radius: 0 18px 18px 0;
+  display: flex;
+  align-items: center;
+}

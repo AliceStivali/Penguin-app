@@ -6,6 +6,11 @@ const arr = data.itineraries[0].segments[0].arrival;
 const duration = data.itineraries[0].segments[0].duration;
 const price = data.price.total;
 
+const depDate = dep.at.slice(0, 10);
+const arrDate = arr.at.slice(0, 10);
+const depTime = dep.at.slice(11, -3);
+const arrTime = dep.at.slice(11, -3);
+
 export function Flights() {
   return (
     <div className="bg-black opacity-80 rounded-3xl container mx-auto flights-container">
@@ -13,16 +18,16 @@ export function Flights() {
       <div className="single-flight-container">
         <div style={{ width: "70%" }}>
           <div className="flights-departure">
-            <div>DEPT</div>
+            <div>DEP</div>
             <div>{dep.iataCode}</div>
-            <div>{dep.at}</div>
-            <div>{dep.at}</div>
+            <div>{depDate}</div>
+            <div>{depTime}</div>
           </div>
           <div className="flights-arrival">
             <div>ARR</div>
             <div>{arr.iataCode}</div>
-            <div>{arr.at}</div>
-            <div>{arr.at}</div>
+            <div>{arrDate}</div>
+            <div>{arrTime}</div>
           </div>
         </div>
         <div className="flight-details">
