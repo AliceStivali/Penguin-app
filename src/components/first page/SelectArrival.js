@@ -8,8 +8,8 @@ function getUniqueListBy(arr, key) {
   return [...new Map(arr.map((item) => [item[key], item])).values()];
 }
 
-function SelectArrival(iataCode) {
-  const { desinationList, destinationError, destinationLoading } = useFetchDesination(iataCode.iataCode);
+function SelectArrival({iataCode}) {
+  const { desinationList, destinationError, destinationLoading } = useFetchDesination(iataCode);
   const [arrival, setArrival] = useState(null);
   let destinationCityList = [];
   if (desinationList) {

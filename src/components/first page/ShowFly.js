@@ -6,8 +6,8 @@ function ShowFly(data, toIataCode) {
 
   const [date, setDate] = useState(null);
   const { flyList, error, flyLoading } = useFetchFly(
-    data.data.iataCode,
-    data.toIataCode.iataCode,
+    data.data,
+    data.toIataCode?.iataCode,
     date
   );
   console.log(data);
