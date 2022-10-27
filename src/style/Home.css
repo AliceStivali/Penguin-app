@@ -23,6 +23,7 @@ body {
 .main_hero {
   width: 90rem;
   height: 35rem;
+  margin-top: 3rem;
   position: absolute;
 }
 
