@@ -2,14 +2,12 @@ import { useState } from "react";
 import useFetchFly from "./useFetchFly";
 
 function ShowFly(data, toIataCode) {
-
-
   const [flyData, setFlyData] = useState({
     date: null,
     adult: 1,
     child: 0,
     return: undefined,
-    dateReturn: null
+    dateReturn: null,
   });
   const { flyList, error, flyLoading } = useFetchFly(
     data.data,
@@ -18,7 +16,6 @@ function ShowFly(data, toIataCode) {
   );
   console.log(data);
   console.log(data.toIataCode);
-
 
   function handleInputDate(event) {
     event.preventDefault();

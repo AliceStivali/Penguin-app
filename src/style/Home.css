@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/lily-script-one');
+@import url("http://fonts.cdnfonts.com/css/lily-script-one");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ body {
   height: 100vh;
 }
 
-.home_container {
+.home-container {
   display: flex;
   height: 100vh;
   flex-wrap: wrap;
@@ -20,25 +20,25 @@ body {
   align-items: center;
 }
 
-.main_hero {
+.main-hero {
   width: 90rem;
   height: 35rem;
   margin-top: 3rem;
   position: absolute;
 }
 
-.footer_container {
+.footer-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 5rem;
   margin-top: 40rem;
-  background-color: rgba(0, 0, 0, 0.85);;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 p {
-  font-family: 'Lily Script One';
+  font-family: "Lily Script One";
   font-size: 35px;
   color: white;
   padding-right: 3rem;

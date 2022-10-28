@@ -1,7 +1,9 @@
 import React from "react";
 
 export function Footer() {
-    return <div className="footer_container">
-        <p>Penguin</p>
+  return (
+    <div className="footer-container">
+      <p>Penguin</p>
     </div>
+  );
 }

@@ -1,32 +1,39 @@
-
 import { Autocomplete, TextField } from "@mui/material";
 import { useState } from "react";
-import ShowFly from "./ShowFly";
 import useFetchDesination from "./useFetchDestination";
 
 function getUniqueListBy(arr, key) {
   return [...new Map(arr.map((item) => [item[key], item])).values()];
 }
 
-function SelectArrival({iataCode}) {
-  const { desinationList, destinationError, destinationLoading } = useFetchDesination(iataCode);
+function SelectArrival({ iataCode, childToParent }) {
+  const { desinationList, destinationError, destinationLoading } =
+    useFetchDesination(iataCode);
   const [arrival, setArrival] = useState(null);
   let destinationCityList = [];
   if (desinationList) {
     destinationCityList = getUniqueListBy(desinationList.data, "name");
   }
+  console.log(arrival);
+  // const data = {
+  //   type: "location",
+  //   subtype: "city",
+  //   name: "ADDIS ABABA",
+  //   iataCode: "ADD",
+  // };
 
   return (
     <div>
       <Autocomplete
-        onChange={(event, value) => setArrival(value)}
+        onChange={(event, value) => childToParent(value)}
         disablePortal
-        options={destinationCityList.sort((a, b) => -b.name.localeCompare(a.countryName))}
+        options={destinationCityList.sort(
+          (a, b) => -b.name.localeCompare(a.countryName)
+        )}
         getOptionLabel={(option) => option.name}
         sx={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="Arrival" />}
       />
-    <ShowFly data={iataCode} toIataCode={arrival}/>
     </div>
   );
 }
