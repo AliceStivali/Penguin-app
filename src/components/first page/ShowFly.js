@@ -1,3 +1,4 @@
+import { color } from "@mui/system";
 import { useState } from "react";
 import useFetchFly from "./useFetchFly";
 
@@ -31,15 +32,59 @@ function ShowFly(data, toIataCode) {
   return (
     <div>
       <form onSubmit={handleInputDate}>
-        <span>Inserire la data di partenza:</span>
-        <input type="date" name="date" />
-        <input type="number" name="adult" id="adult" placeholder="adult" />
-        <input type="number" name="child" id="child" placeholder="child" />
-        <span>Ritorno?</span>
-        <input type="checkbox" name="return" id="return" />
-        <span>Inserire la data di partenza:</span>
-        <input type="date" name="dateReturn" />
-        <button type="submit">Cerca</button>
+        <div style={{ display: "flex", margin: "15px 0" }}>
+          <span className="input-margin">Departure</span>
+          <input type="date" name="date" />
+          <div className="input-margin">
+            Adults (+12)
+            <div className="passengers-input-container">
+              <input
+                type="number"
+                name="adult"
+                id="adult"
+                className="passengers-input"
+              />
+              <img
+                src="./penguin.png"
+                alt="pinguino adulto"
+                style={{ height: "20px" }}
+              />
+            </div>
+          </div>
+          <div className="input-margin">
+            Children (2-12)
+            <div className="passengers-input-container">
+              <input
+                type="number"
+                name="child"
+                id="child"
+                className="passengers-input"
+              />
+              <img
+                src="./penguin.png"
+                alt="pinguino bambino"
+                style={{ height: "13px" }}
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            margin: "15px 0",
+          }}
+        >
+          <div>
+            <span className="input-margin">Return</span>
+            <input type="checkbox" name="return" id="return" />
+            <span className="input-margin">Arrival</span>
+            <input type="date" name="dateReturn" />
+          </div>
+          <button type="submit" className="search-button">
+            Search
+          </button>
+        </div>
       </form>
       {flyLoading && <h3>Caricamento...</h3>}
       {error && <h3> C'è stato un errore</h3>}

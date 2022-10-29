@@ -1,13 +1,9 @@
-import InputAirport from "./components/first page/InputAirport";
-import { Home } from "./components/first page/Home";
-import { HomeSearch } from "./components/second page/HomeSearch";
+import { Search } from "./components/first page/Search";
 
 export function App() {
   return (
     <div>
-    {/* <Home /> */}
-    {/* <HomeSearch /> */}
-      <InputAirport />
+      <Search />
     </div>
   );
 }

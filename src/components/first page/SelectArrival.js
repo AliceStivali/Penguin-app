@@ -1,6 +1,7 @@
 import { Autocomplete, TextField } from "@mui/material";
 import { useState } from "react";
 import useFetchDesination from "./useFetchDestination";
+import "../../style/InputAirport.css";
 
 function getUniqueListBy(arr, key) {
   return [...new Map(arr.map((item) => [item[key], item])).values()];
@@ -32,7 +33,13 @@ function SelectArrival({ iataCode, childToParent }) {
         )}
         getOptionLabel={(option) => option.name}
         sx={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} label="Arrival" />}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label="Search city or airport"
+            className="dep-arr-input"
+          />
+        )}
       />
     </div>
   );
