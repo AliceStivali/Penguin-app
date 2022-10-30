@@ -45,7 +45,68 @@ function BookingInfo() {
                     issuanceCountry: "", //nazione del documento
                     nationality: "", //nazione del viaggiatore
                   }
-                ]
+                ],
+                //prezzo e varie opzioni per il volo
+                price: {
+                    grandTotal: 00, // prezzo totale con le tasse
+                    total: 00, // prezzo del volo più vari servizi
+                    base: 00, //prezzo base del volo
+                    currency: "EUR", //valuta del booking
+                    // servizi di volo obbligatori
+                    fees: [
+                      {
+                        type: "SUPPLIER", //tipo di opzione
+                        amount: 0 //costo
+                      },
+                      // li ho lasciati per avere un linea guida sulle varie servizi
+                      {
+                        type: "FORM_OF_PAYMENT",
+                        amount: 0
+                      },
+                      {
+                        type: TICKETING,
+                        amount: 0
+                      }
+                    ],
+                    // servizi di volo facoltativi
+                    additionalServices: [
+                      {
+                        type: "CHECKED_BAGS",
+                        amount: 0
+                      },
+                      {
+                        type: "SEATS",
+                        amount: 0
+                      }
+                    ]
+                  },
+                  //resoconto del prezzo per viaggiattore
+                  travelerPricings: [
+                    {
+                      travelerId: 1, // uguale a quello nella sezione "travelers"
+                      fareOption: "STANDARD", //dovrebbe essere la selezione della tipologia di offerta (tipo prime di edreams)
+                      travelerType: "ADULT", // se è abbastanza grande per bere
+                      //prezzo del volo da prendere dai dati del volo se c'è altrimenti possiamo toglierlo
+                      price: {
+                        currency: EUR,
+                        total: 200.94,
+                        base: 126,
+                        taxes: [
+                          {
+                            "code": "YQ",
+                            "amount": "0.94"
+                          },
+                          {
+                            "code": "CJ",
+                            "amount": "41.67"
+                          },
+                          {
+                            "code": "FR",
+                            "amount": "31.33"
+                          }
+                        ]
+                      }
+                    }]
               }]}
     })
 

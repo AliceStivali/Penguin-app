@@ -1,0 +1,45 @@
+@import url("http://fonts.cdnfonts.com/css/lily-script-one");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--penguinLightBlueGrad);
+  height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-hero {
+  width: 90rem;
+  height: 35rem;
+  margin-top: 3rem;
+  position: absolute;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  margin-top: 40rem;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+p {
+  font-family: "Lily Script One";
+  font-size: 35px;
+  color: white;
+  padding-right: 3rem;
+}

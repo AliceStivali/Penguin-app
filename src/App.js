@@ -1,10 +1,9 @@
-import InputAirport from "./components/first page/InputAirport";
-
+import { Search } from "./components/first page/Search";
 
 export function App() {
   return (
     <div>
-      <InputAirport />
+      <Search />
     </div>
   );
 }

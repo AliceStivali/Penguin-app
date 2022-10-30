@@ -6,6 +6,12 @@
   --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
 }
 
+/* font-family */
+@import url('http://fonts.cdnfonts.com/css/lily-script-one');
+
+/*per utilizzarlo:  font-family: 'Lily Script One'; */
+
+
 * {
   padding: 0;
   box-sizing: border-box;
