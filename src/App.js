@@ -1,9 +1,9 @@
-import { Search } from "./components/first page/Search";
+import { FlightsWithReturn } from "./components/second page/FlightsWithReturn";
 
 export function App() {
   return (
     <div>
-      <Search />
+      <FlightsWithReturn />
     </div>
   );
 }
