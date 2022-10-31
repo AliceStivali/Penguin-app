@@ -7,10 +7,9 @@
 }
 
 /* font-family */
-@import url('http://fonts.cdnfonts.com/css/lily-script-one');
+@import url("http://fonts.cdnfonts.com/css/lily-script-one");
 
 /*per utilizzarlo:  font-family: 'Lily Script One'; */
-
 
 * {
   padding: 0;
@@ -42,10 +41,18 @@ body {
   padding: 5px 10px;
   color: var(--penguinWhite);
 }
-
+.card-book-button:hover {
+  transform: scale(1.2);
+  transition-duration: 0.7s;
+  box-shadow: 3px 3px 10px grey;
+}
 .search-button {
   background-color: var(--penguinOrange);
   border-radius: 127px;
   padding: 5px 10px;
   color: var(--penguinWhite);
+}
+.search-button:hover {
+  transform: scale(1.2);
+  transition-duration: 0.7s;
 }
