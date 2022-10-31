@@ -18,13 +18,17 @@ export function Flights() {
       <div className="single-flight-container">
         <div style={{ width: "70%" }}>
           <div className="flights-departure">
-            <div>DEP</div>
+            <div>
+              <img src="./plane-dep.png" alt="dep" style={{ width: "50px" }} />
+            </div>
             <div>{dep.iataCode}</div>
             <div>{depDate}</div>
             <div>{depTime}</div>
           </div>
           <div className="flights-arrival">
-            <div>ARR</div>
+            <div>
+              <img src="./plane-arr.png" alt="arr" style={{ width: "50px" }} />
+            </div>
             <div>{arr.iataCode}</div>
             <div>{arrDate}</div>
             <div>{arrTime}</div>
