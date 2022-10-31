@@ -47,7 +47,10 @@ function ShowFly(data, toIataCode) {
               </div>
             </div>
             <div>
-              <div className="input-margin">Arrival</div>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <span className="input-margin">Return</span>
+                <input type="checkbox" name="return" id="return" />
+              </div>
               <div className="passengers-input-container">
                 <input type="date" name="dateReturn" />
               </div>
@@ -97,14 +100,10 @@ function ShowFly(data, toIataCode) {
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "flex-end",
             margin: "15px 0",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <span className="input-margin">Return</span>
-            <input type="checkbox" name="return" id="return" />
-          </div>
           <button type="submit" className="search-button input-airport-button">
             Search
           </button>
