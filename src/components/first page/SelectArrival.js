@@ -25,6 +25,7 @@ function SelectArrival({ iataCode, childToParent }) {
 
   return (
     <div>
+      <div style={{ width: "50%", marginLeft: "10px" }}>To</div>
       <Autocomplete
         onChange={(event, value) => childToParent(value)}
         disablePortal
@@ -34,11 +35,7 @@ function SelectArrival({ iataCode, childToParent }) {
         getOptionLabel={(option) => option.name}
         sx={{ width: 300 }}
         renderInput={(params) => (
-          <TextField
-            {...params}
-            label="Search city or airport"
-            className="dep-arr-input"
-          />
+          <TextField {...params} className="dep-arr-input" />
         )}
       />
     </div>

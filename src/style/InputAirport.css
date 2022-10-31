@@ -1,14 +1,15 @@
 .search-container {
   background-color: black;
-  opacity: 80%;
+  opacity: 75%;
   border-radius: 33px;
   width: 70%;
   display: flex;
   justify-content: center;
+  font-size: 12px;
 }
 
 .input-airport-container {
-  width: 70%;
+  width: 80%;
   color: var(--penguinWhite);
   padding: 2rem;
 }
@@ -37,4 +38,15 @@
 .passengers-input {
   width: 40px;
   color: black;
+}
+.css-1qqsdnr-MuiAutocomplete-root .MuiOutlinedInput-root {
+  padding: 0 !important;
+}
+.css-gcwvw8-MuiAutocomplete-root .MuiOutlinedInput-root {
+  padding: 0 !important;
+}
+.input-airport-button {
+  padding: 8px 60px;
+  opacity: 100%;
+  margin-top: 20px;
 }
