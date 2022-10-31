@@ -1,14 +1,14 @@
 import useSWR from "swr";
 
 const fetcher = (url) =>
-  fetch(url, {
-    method: "GET",
-    headers: {
-      Authorization: "Bearer VeAbLF6DhWdRFZpU8kb0l1X2TTZs", //questa è la kay
-    },
-    mode: "cors",
-    catch: "default",
-  }).then((responce) => responce.json());
+    fetch(url, {
+        method: "GET",
+        headers: {
+            Authorization: "Bearer 8GLR0Gs5j345q0ifAN5QSA6BWegJ", //questa è la kay
+        },
+        mode: "cors",
+        catch: "default",
+    }).then((responce) => responce.json());
 
 function useFetchFly(iataCode, toIataCode, flyData) {
   const { data, error } = useSWR(

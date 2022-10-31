@@ -1,6 +1,7 @@
 import useSWR from "swr";
 
 const fetcher = (url) =>
+
   fetch(url, {
     method: "GET",
     headers: {
@@ -9,6 +10,7 @@ const fetcher = (url) =>
     mode: "cors",
     catch: "default",
   }).then((responce) => responce.json());
+
 
 function useFetchDesination(iataCode) {
   const { data, error } = useSWR(

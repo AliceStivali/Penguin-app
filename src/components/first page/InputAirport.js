@@ -18,12 +18,11 @@ function InputAirport() {
   return (
     <div className="input-airport-container">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div>
+        <div style={{ width: "45%" }}>
           <div style={{ marginLeft: "10px" }}>From</div>
           <div>
             <Autocomplete
               className="dep-input-padding"
-              style={{ width: "85%" }}
               freeSolo
               onChange={(event, value) => setCityIataCode(value.iata_code)}
               options={airportList.sort(
