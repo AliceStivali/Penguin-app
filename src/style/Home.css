@@ -37,7 +37,7 @@ body {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-p {
+footer-container > p {
   font-family: "Lily Script One";
   font-size: 35px;
   color: white;
