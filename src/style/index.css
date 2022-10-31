@@ -3,6 +3,7 @@
   --penguinWhite: rgb(239, 236, 236);
   --penguinLightBlue: #d3eaff;
   --penguinRedGradient: linear-gradient(#e83a3a, #ff5e03);
+  --penguinNavGradient: linear-gradient(#FF9374, #E8644E);
   --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
 }
 
