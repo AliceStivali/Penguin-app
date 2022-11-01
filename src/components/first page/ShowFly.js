@@ -1,38 +1,30 @@
 import { color } from "@mui/system";
 import { useState } from "react";
-import useFetchFly from "./useFetchFly";
 import { Link } from "react-router-dom";
+import { checkbox } from "@material-tailwind/react";
 
 function ShowFly(data, toIataCode) {
   const [flyData, setFlyData] = useState({
     date: null,
     adult: 1,
     child: 0,
-    return: undefined,
+    flightReturn: false,
     dateReturn: null,
   });
-  const { flyList, error, flyLoading } = useFetchFly(
-    data.data,
-    data.toIataCode?.iataCode,
-    flyData
-  );
-  console.log(data);
-  console.log(data.toIataCode);
 
   function handleInputDate(event) {
-    event.preventDefault();
+    const value = event.target.value;
+    const checked = event.target.checked;
+    const name = event.target.name;
     setFlyData({
-      date: event.target.elements.date.value,
-      adult: event.target.elements.adult.value,
-      child: event.target.elements.child.value,
-      return: event.target.elements.return.checked ? true : false,
-      dateReturn: event.target.elements.dateReturn.value,
+      ...flyData,
+      [name]: name === "flightReturn" ? checked : value,
     });
   }
-
+  console.log(flyData.flightReturn);
   return (
     <div>
-      <form onChange={handleInputDate}>
+      <form>
         <div
           style={{
             display: "flex",
@@ -44,16 +36,25 @@ function ShowFly(data, toIataCode) {
             <div style={{ marginRight: "10px" }}>
               <div className="input-margin">Departure</div>
               <div className="passengers-input-container">
-                <input type="date" name="date" />
+                <input type="date" name="date" onChange={handleInputDate} />
               </div>
             </div>
             <div>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <span className="input-margin">Return</span>
-                <input type="checkbox" name="return" id="return" />
+                <input
+                  type="checkbox"
+                  name="return"
+                  id="return"
+                  onChange={handleInputDate}
+                />
               </div>
               <div className="passengers-input-container">
-                <input type="date" name="dateReturn" />
+                <input
+                  type="date"
+                  name="dateReturn"
+                  onChange={handleInputDate}
+                />
               </div>
             </div>
           </div>
@@ -69,6 +70,7 @@ function ShowFly(data, toIataCode) {
                   name="adult"
                   id="adult"
                   className="passengers-input"
+                  onChange={handleInputDate}
                 />
                 <img
                   src="./penguin.png"
@@ -88,6 +90,7 @@ function ShowFly(data, toIataCode) {
                   name="child"
                   id="child"
                   className="passengers-input"
+                  onChange={handleInputDate}
                 />
                 <img
                   src="./penguin.png"
@@ -106,7 +109,7 @@ function ShowFly(data, toIataCode) {
           }}
         >
           <Link
-            to={`/depart=${data.data}&arrival=${data.toIataCode?.iataCode}&date=${flyData.date}&adult=${flyData.adult}&child=${flyData.child}&return=${flyData.return}&dateReturn=${flyData.dateReturn}`}
+            to={`/depart=${data.data}&arrival=${data.toIataCode?.iataCode}&date=${flyData.date}&adult=${flyData.adult}&child=${flyData.child}&return=${flyData.flightReturn}&dateReturn=${flyData.dateReturn}`}
           >
             {
               <button
@@ -115,17 +118,10 @@ function ShowFly(data, toIataCode) {
               >
                 Search
               </button>
-            }{" "}
-          </Link>{" "}
+            }
+          </Link>
         </div>
       </form>
-      {flyLoading && <h3>Caricamento...</h3>}
-      {error && <h3> C'è stato un errore</h3>}
-      {flyList && (
-        <div>
-          <h2> Voli trovati: {flyList.meta.count}</h2>
-        </div>
-      )}
     </div>
   );
 }

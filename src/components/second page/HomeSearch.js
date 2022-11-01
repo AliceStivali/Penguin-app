@@ -2,7 +2,7 @@ import { CardContainer } from "./CardContainer";
 import React from "react";
 import "../../style/HomeSearch.css";
 import { Navbar } from "../Navbar";
-import { Flights } from "./Flights";
+import { FlightsContainer } from "./FlightsContainer";
 import { Footer } from "../Footer";
 import { ReducedSearch } from "./ReducedSearch";
 
@@ -16,7 +16,7 @@ export function HomeSearch() {
         className="main_hero_secondPage"
         alt="fjord"
       />
-      <Flights />
+      <FlightsContainer />
       <CardContainer />
       <Footer />
     </div>

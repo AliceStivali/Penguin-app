@@ -7,7 +7,7 @@ export function App() {
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route
-        path="//depart=:iataCode&arrival=:toIataCode&date=:date&adult=:adult&child=:child&return=:return&dateReturn=:dateReturn"
+        path="//depart=:iataCode&arrival=:toIataCode&date=:date&adult=:adult&child=:child&return=:flightReturn&dateReturn=:dateReturn"
         element={<HomeSearch />}
       ></Route>
     </Routes>
