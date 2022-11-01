@@ -1,10 +1,24 @@
 import { CardContainer } from "./CardContainer";
 import React from "react";
 import "../../style/HomeSearch.css";
+import { Navbar } from "../Navbar";
+import { Flights } from "./Flights";
+import { Footer } from "../Footer";
+import { ReducedSearch } from "./ReducedSearch";
 
 export function HomeSearch() {
-    return <div className="home_container">
-            <img src="../../mainHero_secondPage.jpeg" className="main_hero_secondPage"/>
-        {/* <CardContainer /> */}
+  return (
+    <div className="home_container">
+      <Navbar />
+      <ReducedSearch />
+      <img
+        src="../../mainHero_secondPage.jpeg"
+        className="main_hero_secondPage"
+        alt="fjord"
+      />
+      <Flights />
+      <CardContainer />
+      <Footer />
     </div>
+  );
 }

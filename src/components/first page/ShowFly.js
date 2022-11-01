@@ -1,6 +1,7 @@
 import { color } from "@mui/system";
 import { useState } from "react";
 import useFetchFly from "./useFetchFly";
+import { Link } from "react-router-dom";
 
 function ShowFly(data, toIataCode) {
   const [flyData, setFlyData] = useState({
@@ -31,7 +32,7 @@ function ShowFly(data, toIataCode) {
 
   return (
     <div>
-      <form onSubmit={handleInputDate}>
+      <form onChange={handleInputDate}>
         <div
           style={{
             display: "flex",
@@ -104,9 +105,18 @@ function ShowFly(data, toIataCode) {
             margin: "15px 0",
           }}
         >
-          <button type="submit" className="search-button input-airport-button">
-            Search
-          </button>
+          <Link
+            to={`/depart=${data.data}&arrival=${data.toIataCode?.iataCode}&date=${flyData.date}&adult=${flyData.adult}&child=${flyData.child}&return=${flyData.return}&dateReturn=${flyData.dateReturn}`}
+          >
+            {
+              <button
+                type="submit"
+                className="search-button input-airport-button"
+              >
+                Search
+              </button>
+            }{" "}
+          </Link>{" "}
         </div>
       </form>
       {flyLoading && <h3>Caricamento...</h3>}

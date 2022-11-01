@@ -16,11 +16,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  gap: 5rem;
 }
 
 .main_hero_secondPage {
-    width: 93.75rem;
-    height: 18rem;
-    position: absolute;
-    margin-top: 8rem;
+  width: 93.75rem;
+  height: 18rem;
+  position: absolute;
+  margin-top: 8rem;
 }
