@@ -21,11 +21,11 @@ export function FlightsContainer() {
     <div className="bg-black opacity-80 rounded-3xl container mx-auto flights-container">
       <div className="flights-header">Flights</div>
       {flyLoading && <h2>Loading...</h2>}
-      {/* {!flightReturn &&
-        flyList.data.map((index, item) => <Flights key={index} data={item} />)} */}
-      {flightReturn &&
+      {flyList && dateReturn == null &&
+        flyList.map((index, item) => <Flights data={item} />)}
+      {flyList && dateReturn !== null &&
         flyList.data.map((index, item) => (
-          <FlightsWithReturn key={index} data={item} />
+          <FlightsWithReturn data={item} />
         ))}
     </div>
   );
