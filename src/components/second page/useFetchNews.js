@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import { useParams } from "react-router-dom";
 
 const options = {
   method: "GET",
@@ -8,12 +9,13 @@ const options = {
   },
 };
 
-const city = "Milan"
+
 const fetcher = (url) =>
   fetch(url, options).then((response) => response.json());
 
 export function useFetchNews() {
-
+  const {cityarrival} = useParams()
+  const city = cityarrival
   const { data, error } = useSWR(`https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=
   ${city}&lang=en&sort_by=date&search_in=title&page=1&media=True`
   ,fetcher);
