@@ -1,6 +1,5 @@
 import { useState } from "react";
 import useFetchTour from "./useFetchTour";
-// import tourData from "./tourData";
 import "../../style/TouristInfo.css";
 
 export function TouristInfo() {
