@@ -1,18 +1,14 @@
 import useSWR from "swr";
-import airportList from "../first page/data.js";
 import { useParams } from "react-router-dom";
-
+import { useFetchGeoloc } from "./useFetchGeoloc";
 
 function useFetchTour() {
-  const {toIataCode} = useParams()
-  const cityData = airportList.find(
-    ({ iata_code }) => iata_code === toIataCode
-  );
-  console.log(cityData, 'alice');
+  const { cityarrival } = useParams();
+  const { geolocData, geolocError } = useFetchGeoloc(cityarrival);
+
+  console.log(geolocData);
   const { data, error } = useSWR(
-    // cityData
-    `https://test.api.amadeus.com/v1/shopping/activities?latitude=${cityData._geoloc.lat}&longitude=${cityData._geoloc.lng}&radius=20`,
-    
+    `https://test.api.amadeus.com/v1/shopping/activities?latitude=${geolocData.latitude}&longitude=${geolocData.longitude}&radius=20`
   );
 
   return {
