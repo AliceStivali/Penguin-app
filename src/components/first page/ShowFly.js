@@ -21,7 +21,7 @@ function ShowFly(data, toIataCode) {
       [name]: name === "flightReturn" ? checked : value,
     });
   }
-  console.log(flyData.flightReturn);
+
   return (
     <div>
       <form>
@@ -109,7 +109,7 @@ function ShowFly(data, toIataCode) {
           }}
         >
           <Link
-            to={`/depart=${data.data}&arrival=${data.toIataCode?.iataCode}&date=${flyData.date}&adult=${flyData.adult}&child=${flyData.child}&return=${flyData.flightReturn}&dateReturn=${flyData.dateReturn}`}
+            to={`/depart=${data.data}&arrival=${data.toIataCode?.iataCode}&date=${flyData.date}&adult=${flyData.adult}&child=${flyData.child}&cityarrival=${data.toIataCode?.name}&dateReturn=${flyData.dateReturn}`}
           >
             {
               <button

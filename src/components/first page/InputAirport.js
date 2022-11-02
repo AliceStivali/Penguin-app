@@ -13,7 +13,7 @@ function InputAirport() {
   function childToParent(arrival) {
     setData(arrival);
   }
-  console.log(data);
+
 
   return (
     <div className="input-airport-container">

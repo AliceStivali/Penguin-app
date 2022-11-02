@@ -15,7 +15,7 @@ function SelectArrival({ iataCode, childToParent }) {
   if (desinationList) {
     destinationCityList = getUniqueListBy(desinationList.data, "name");
   }
-  console.log(arrival);
+
   // const data = {
   //   type: "location",
   //   subtype: "city",

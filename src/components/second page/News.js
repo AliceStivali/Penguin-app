@@ -18,9 +18,9 @@ export function News() {
     }
   }
 
-  console.log(data);
-  console.log(articlesNumber);
-  console.log(i);
+  // console.log(data);
+  // console.log(articlesNumber);
+  // console.log(i);
   return (
     <div className="flex-col flex-wrap justify-center items-space-between; news-list-style">
       {loading && <h2>Caricamento...</h2>}

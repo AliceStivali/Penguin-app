@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import useFetchTour from "./useFetchTour";
-import tourData from "./tourData";
+import useFetchTour from "./useFetchTour";
+// import tourData from "./tourData";
 import "../../style/TouristInfo.css";
 
 export function TouristInfo() {
@@ -17,11 +17,12 @@ export function TouristInfo() {
     }
   }
 
-  // const { tourData, tourError, tourLoading } = useFetchTour();
+  const { tourData, tourError, tourLoading } = useFetchTour();
+
   return (
     <div className="tourist-info">
-      {/* {tourLoading && <h3>Caricamento...</h3>}
-      {tourError && <h3> C'è stato un errore</h3>} */}
+      {tourLoading && <h3>Caricamento...</h3>}
+      {tourError && <h3> C'è stato un errore</h3>}
       {tourData && (
         <div>
           <h6>{tourData.data[index].name}</h6>

@@ -2,16 +2,21 @@
 import "../../style/Flights.css";
 
 export function Flights(data) {
-  const dep = data.itineraries[0].segments[0].departure;
-  const arr = data.itineraries[0].segments[0].arrival;
-  const duration = data.itineraries[0].segments[0].duration;
-  const price = data.price.total;
+
+  const dep = data.data.itineraries[0].segments[0].departure;
+  const arr = data.data.itineraries[0].segments[0].arrival;
+  const duration = data.data.itineraries[0].segments[0].duration;
+  const price = data.data.price.total;
 
   const depDate = dep.at.slice(0, 10);
   const arrDate = arr.at.slice(0, 10);
   const depTime = dep.at.slice(11, -3);
   const arrTime = dep.at.slice(11, -3);
-  return (
+
+
+
+
+  return ( data &&
     <div className="single-flight-container">
       <div style={{ width: "70%" }}>
         <div className="flights-departure">
@@ -41,6 +46,7 @@ export function Flights(data) {
           </button>
         </div>
       </div>
-    </div>
+    </div> 
+    
   );
 }

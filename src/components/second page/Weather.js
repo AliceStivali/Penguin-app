@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import useSWR from "swr";
+import { useParams } from "react-router-dom";
 import "../../style/Weather.css";
 
+
 export function Weather() {
-  const city = "Genova";
+  const {cityarrival} = useParams()
+  const city = cityarrival
   const api = "fd8dfe68dddae8242051d12f28167f50";
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data, error } = useSWR(
