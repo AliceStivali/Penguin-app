@@ -14,17 +14,16 @@ body {
 
 .home-container {
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 2.5rem;
 }
 
 .main-hero {
   width: 90rem;
   height: 35rem;
-  margin-top: 3rem;
   position: absolute;
   z-index: -999;
 }
@@ -34,8 +33,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 5rem;
-  margin-top: 40rem;
+  height: 3.5rem;
   background-color: rgba(0, 0, 0, 0.85);
 }
 
@@ -44,4 +42,5 @@ body {
   font-size: 35px;
   color: white;
   padding-right: 3rem;
+  margin-top: 1rem;
 }
