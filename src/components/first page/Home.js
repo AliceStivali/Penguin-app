@@ -11,7 +11,7 @@ export function Home() {
       <Navbar />
       <img src="../../mainHero.jpeg" alt="fjord" className="main-hero" />
       <img
-        src="../../photo_2022-11-03 16.42.39.jpeg"
+        src="../../main-hero-small.jpeg"
         alt="fjord-small"
         className="main-hero-smartphone"
       />
