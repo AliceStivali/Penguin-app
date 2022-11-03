@@ -30,6 +30,7 @@ function ShowFly(data, toIataCode) {
             display: "flex",
             margin: "15px 0",
             justifyContent: "space-between",
+            flexWrap: "wrap",
           }}
         >
           <div style={{ display: "flex" }}>
@@ -58,7 +59,7 @@ function ShowFly(data, toIataCode) {
               </div>
             </div>
           </div>
-          <div style={{ display: "flex" }}>
+          <div className="passengers-container">
             <div style={{ marginRight: "10px" }}>
               <div className="input-margin">Adults (+12)</div>
               <div
@@ -101,13 +102,7 @@ function ShowFly(data, toIataCode) {
             </div>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            margin: "15px 0",
-          }}
-        >
+        <div className="search-button-container">
           <Link
             to={`/depart=${data.data}&arrival=${data.toIataCode?.iataCode}&date=${flyData.date}&adult=${flyData.adult}&child=${flyData.child}&cityarrival=${data.toIataCode?.name}&dateReturn=${flyData.dateReturn}`}
           >

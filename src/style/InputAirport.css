@@ -1,11 +1,11 @@
 .search-container {
-  background-color: black;
-  opacity: 75%;
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 33px;
   width: 70%;
   display: flex;
   justify-content: center;
   font-size: 12px;
+  min-width: min-content;
 }
 
 .input-airport-container {
@@ -27,6 +27,9 @@
 .input-margin {
   margin: 5px;
 }
+.passengers-container {
+  display: flex;
+}
 .passengers-input-container {
   display: flex;
   align-items: flex-end;
@@ -34,6 +37,9 @@
   border-radius: 18px 18px 0 18px;
   opacity: 100%;
   padding: 5px;
+}
+.passengers-input-container input {
+  color: black;
 }
 .passengers-input {
   width: 40px;
@@ -49,4 +55,28 @@
   padding: 8px 60px;
   opacity: 100%;
   margin-top: 20px;
+}
+.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+  min-width: 200px !important;
+  max-width: 300px;
+}
+.css-gcwvw8-MuiAutocomplete-root {
+  max-width: 300px;
+}
+.search-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .css-gcwvw8-MuiAutocomplete-root {
+    width: 200px !important;
+  }
+  .search-button-container {
+    justify-content: center;
+  }
+  .passengers-container {
+    margin-top: 1rem;
+  }
 }

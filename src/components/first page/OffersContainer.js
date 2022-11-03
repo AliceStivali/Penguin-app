@@ -3,7 +3,10 @@ import "../../style/OffersContainer.css";
 
 export function OffersContainer() {
   return (
-    <div className="h-2/4 flex flex-nowrap gap-x-7 justify-center items-center">
+    <div
+      className="h-2/4 flex gap-x-7 justify-center items-center"
+      style={{ flexWrap: "wrap" }}
+    >
       <BestOffersCard>
         <p className="first_page_cards">
           <strong>Madrid</strong>

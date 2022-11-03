@@ -14,7 +14,7 @@
 .nav_orange {
   color: white;
   background: var(--penguinNavGradient);
-  width: 70rem;
+  width: 65rem;
   height: 3rem;
   display: flex;
   align-items: center;
@@ -38,6 +38,7 @@
   margin-right: 15rem;
   margin-left: 2rem;
   letter-spacing: 0.2rem;
+  white-space: nowrap;
 }
 
 .nav_orange p:nth-child(3) {
@@ -46,4 +47,37 @@
   margin-top: 1.5rem;
   margin-right: 2rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav_orange {
+    width: 300px;
+    left: 7rem;
+  }
+  .nav_orange p:nth-child(2) {
+    display: none;
+  }
+  .nav_orange p:first-child {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  .nav_cont img {
+    width: 4.5rem;
+  }
+}
+@media only screen and (max-width: 820px) and (min-width: 600px) {
+  .nav_orange {
+    width: 600px;
+    left: 7rem;
+  }
+  .nav_orange p:nth-child(2) {
+    display: none;
+  }
+  .nav_orange p:first-child {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  .nav_cont img {
+    width: 4.5rem;
+  }
 }

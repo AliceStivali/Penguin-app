@@ -16,13 +16,6 @@ function SelectArrival({ iataCode, childToParent }) {
     destinationCityList = getUniqueListBy(desinationList.data, "name");
   }
 
-  // const data = {
-  //   type: "location",
-  //   subtype: "city",
-  //   name: "ADDIS ABABA",
-  //   iataCode: "ADD",
-  // };
-
   return (
     <div>
       <div style={{ width: "50%", marginLeft: "10px" }}>To</div>

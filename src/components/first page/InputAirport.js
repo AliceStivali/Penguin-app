@@ -14,10 +14,15 @@ function InputAirport() {
     setData(arrival);
   }
 
-
   return (
     <div className="input-airport-container">
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
+      >
         <div style={{ width: "45%" }}>
           <div style={{ marginLeft: "10px" }}>From</div>
           <div>

@@ -44,3 +44,22 @@ body {
   padding-right: 3rem;
   margin-top: 1rem;
 }
+@media only screen and (min-width: 600px) {
+  .main-hero {
+    display: block;
+  }
+  .main-hero-smartphone {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-hero {
+    display: none;
+  }
+  .main-hero-smartphone {
+    display: block;
+    position: absolute;
+    z-index: -999;
+    top: 6rem;
+  }
+}
