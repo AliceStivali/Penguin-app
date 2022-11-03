@@ -8,9 +8,9 @@ function ShowFly(data, toIataCode) {
     date: null,
     adult: 1,
     child: 0,
-    flightReturn: false,
     dateReturn: null,
   });
+  const [flightReturn, setFlightReturn] = useState(false);
 
   function handleInputDate(event) {
     const value = event.target.value;
@@ -20,6 +20,10 @@ function ShowFly(data, toIataCode) {
       ...flyData,
       [name]: name === "flightReturn" ? checked : value,
     });
+  }
+
+  function handleReturn(event) {
+    setFlightReturn(event.target.checked);
   }
 
   return (
@@ -47,7 +51,7 @@ function ShowFly(data, toIataCode) {
                   type="checkbox"
                   name="return"
                   id="return"
-                  onChange={handleInputDate}
+                  onChange={handleReturn}
                 />
               </div>
               <div className="passengers-input-container">
@@ -55,6 +59,7 @@ function ShowFly(data, toIataCode) {
                   type="date"
                   name="dateReturn"
                   onChange={handleInputDate}
+                  disabled={!flightReturn && true}
                 />
               </div>
             </div>

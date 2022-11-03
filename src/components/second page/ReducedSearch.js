@@ -29,7 +29,6 @@ export function ReducedSearch() {
           style={{ height: "13px" }}
         />
       </div>
-      <button className="search-button">New search</button>
     </div>
   );
 }

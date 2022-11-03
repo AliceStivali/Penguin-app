@@ -4,6 +4,7 @@
 }
 .flights-container {
   padding: 1rem 2rem 2rem;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .single-flight-container {
   background-color: var(--penguinLightBlue);
@@ -11,6 +12,7 @@
   justify-content: space-between;
   border-radius: 5px;
   padding: 0 0.5rem;
+  margin-bottom: 1rem;
 }
 .flights-departure {
   display: flex;

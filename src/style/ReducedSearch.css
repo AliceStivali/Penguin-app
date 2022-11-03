@@ -1,6 +1,5 @@
 .RS-container {
-  background-color: black;
-  opacity: 85%;
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 33px;
   display: flex;
   padding: 1rem;

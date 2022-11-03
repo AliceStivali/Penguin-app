@@ -3,7 +3,7 @@
   --penguinWhite: rgb(239, 236, 236);
   --penguinLightBlue: #d3eaff;
   --penguinRedGradient: linear-gradient(#e83a3a, #ff5e03);
-  --penguinNavGradient: linear-gradient(#FF9374, #E8644E);
+  --penguinNavGradient: linear-gradient(#ff9374, #e8644e);
   --penguinLightBlueGrad: linear-gradient(#b3d8fb, #fffdfd, #b3d8fb);
 }
 
@@ -52,6 +52,7 @@ body {
   border-radius: 127px;
   padding: 5px 10px;
   color: var(--penguinWhite);
+  height: 2.5rem;
 }
 .search-button:hover {
   transform: scale(1.2);
