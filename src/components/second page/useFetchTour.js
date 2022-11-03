@@ -1,14 +1,15 @@
 import useSWR from "swr";
+import airportList from "../first page/data.js";
 import { useParams } from "react-router-dom";
-import { useFetchGeoloc } from "./useFetchGeoloc";
 
 function useFetchTour() {
   const { cityarrival } = useParams();
-  const { geolocData, geolocError } = useFetchGeoloc(cityarrival);
-
-  console.log(geolocData);
+  const cityData = airportList.find(
+    ({ city }) => city.toUpperCase() === cityarrival
+  );
+  console.log(cityData);
   const { data, error } = useSWR(
-    `https://test.api.amadeus.com/v1/shopping/activities?latitude=${geolocData.latitude}&longitude=${geolocData.longitude}&radius=20`
+    `https://test.api.amadeus.com/v1/shopping/activities?latitude=${cityData._geoloc.lat}&longitude=${cityData._geoloc.lng}&radius=20`
   );
 
   return {

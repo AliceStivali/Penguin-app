@@ -1,9 +1,11 @@
 import useSWR from "swr";
 
+// pAb44zbyuAbq4KwYCZguqQ==Tw0BIc1j9BchthLM
+
 const fetcher = (url) =>
   fetch(url, {
     method: "GET",
-    headers: { "X-Api-Key": "Bearer pAb44zbyuAbq4KwYCZguqQ==Tw0BIc1j9BchthLM" },
+    headers: { "X-Api-Key": "Bearer" },
     contentType: "application/json",
     catch: "default",
   }).then((response) => response.json());
