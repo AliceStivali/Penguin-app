@@ -1,9 +1,14 @@
 .nav_cont {
   display: flex;
+  width: 100vw;
+  margin-bottom: 2rem;
 }
 
 .nav_cont img {
   position: absolute;
+  top: 2rem;
+  left: 3rem;
+  width: 8rem;
 }
 
 .nav_orange {
