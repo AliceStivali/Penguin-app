@@ -1,24 +1,33 @@
 import "../../style/Flights.css";
 
 export function FlightsWithReturn(data) {
-  console.log(data)
+  console.log(data);
   const dep = data.data.itineraries[0].segments[0].departure;
   const arr = data.data.itineraries[0].segments[0].arrival;
-  const duration = data.data.itineraries[0].segments[0].duration;
+  const duration = data.data.itineraries[0].segments[0].duration
+    .slice(2)
+    .toLowerCase();
   const price = data.data.price.total;
 
   const depDate = dep.at.slice(0, 10);
   const arrDate = arr.at.slice(0, 10);
   const depTime = dep.at.slice(11, -3);
   const arrTime = dep.at.slice(11, -3);
-
-
+  const company = data.data.validatingAirlineCodes[0];
+  console.log(company);
 
   return (
     <div className="single-flight-container">
       <div style={{ width: "100%" }}>
-        <div style={{ width: "100%", display: "flex" }}>
-          <div style={{ width: "85%" }}>
+        <div style={{ width: "100%", display: "flex", alignItems: "center" }}>
+          <div>
+            <img
+              src={`../company-logos/${company}.jpg`}
+              alt={`${company}`}
+              style={{ width: "50px", borderRadius: "50%" }}
+            />
+          </div>
+          <div style={{ width: "85%", marginLeft: "1rem" }}>
             <div className="flights-departure">
               <div>
                 <img
@@ -49,8 +58,22 @@ export function FlightsWithReturn(data) {
           </div>
         </div>
 
-        <div style={{ width: "100%", display: "flex", marginTop: "30px" }}>
-          <div style={{ width: "85%" }}>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            marginTop: "30px",
+            alignItems: "center",
+          }}
+        >
+          <div>
+            <img
+              src={`../company-logos/${company}.jpg`}
+              alt={`${company}`}
+              style={{ width: "50px", borderRadius: "50%" }}
+            />
+          </div>
+          <div style={{ width: "85%", marginLeft: "1rem" }}>
             <div className="flights-departure">
               <div>
                 <img

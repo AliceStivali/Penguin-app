@@ -1,20 +1,18 @@
+import { useParams } from "react-router-dom";
 import "../../style/ReducedSearch.css";
-import data from "./flyData";
-
-const dep = data.itineraries[0].segments[0].departure;
-const arr = data.itineraries[0].segments[0].arrival;
-const depDate = dep.at.slice(0, 10);
-const arrDate = arr.at.slice(0, 10);
 
 export function ReducedSearch() {
+  const { iataCode, toIataCode, date, adult, child, dateReturn } = useParams();
   return (
     <div className="RS-container">
-      <div className="input-field RS-input-1">{dep.iataCode}</div>
-      <div className="input-field RS-input-2">{arr.iataCode}</div>
-      <div className="input-field RS-input-3">{depDate}</div>
-      <div className="input-field RS-input-4">{arrDate}</div>
+      <div className="input-field RS-input-1">{iataCode}</div>
+      <div className="input-field RS-input-2">{toIataCode}</div>
+      <div className="input-field RS-input-3">{date}</div>
+      <div className="input-field RS-input-4">
+        {dateReturn === "null" ? "N/D" : dateReturn}
+      </div>
       <div className="input-field RS-input-5">
-        1
+        {adult}
         <img
           src="./penguin.png"
           alt="pinguino adulto"
@@ -22,7 +20,7 @@ export function ReducedSearch() {
         />
       </div>
       <div className="input-field RS-input-6">
-        1
+        {child}
         <img
           src="./penguin.png"
           alt="pinguino bambino"

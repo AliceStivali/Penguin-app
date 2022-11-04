@@ -8,11 +8,14 @@
 }
 .single-flight-container {
   background-color: var(--penguinLightBlue);
-  display: flex;
-  justify-content: space-between;
   border-radius: 5px;
   padding: 0 0.5rem;
   margin-bottom: 1rem;
+}
+.flight-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .flights-departure {
   display: flex;
@@ -30,4 +33,17 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.flights-button-mobile {
+  display: none;
+  width: 90%;
+  margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .flights-button {
+    display: none;
+  }
+  .flights-button-mobile {
+    display: block;
+  }
 }

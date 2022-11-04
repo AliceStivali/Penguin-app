@@ -8,7 +8,9 @@ export function Navbar() {
       <div className="nav_cont">
         <img src="./pingu_logo.png" alt="" width="300rem" />
         <div className="nav_orange">
-          <p className="nav-title">Penguin</p>
+          <Link to={`/`} className="nav-title">
+            <p>Penguin</p>
+          </Link>
           <p>They can’t fly, you can</p>
           <Link to={`/about`} className="nav-link">
             <p>About</p>

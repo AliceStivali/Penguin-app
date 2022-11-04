@@ -4,15 +4,17 @@ import { Weather } from "./Weather";
 import { News } from "./News";
 
 export function CardContainer() {
- return <div className="flex flex-nowrap gap-x-7 justify-center items-center">
-        <Card>
-            <Weather />
-        </Card>
-        <Card>
-            <News />
-        </Card>
+  return (
+    <div className="flex flex-wrap gap-x-7 justify-center items-center">
+      <Card>
+        <Weather />
+      </Card>
+      <Card>
+        <News />
+      </Card>
       <Card>
         <TouristInfo />
       </Card>
-  </div>
+    </div>
+  );
 }

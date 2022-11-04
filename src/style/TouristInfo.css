@@ -16,3 +16,11 @@
 .tourist-arrow-btn-container {
   display: flex;
 }
+
+button a {
+  text-decoration: none;
+  color: var(--penguinWhite);
+}
+button a:hover {
+  color: var(--penguinWhite);
+}

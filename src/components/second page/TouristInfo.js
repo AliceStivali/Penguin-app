@@ -25,11 +25,13 @@ export function TouristInfo() {
       {tourData && (
         <div>
           <h6>{tourData.data[index].name}</h6>
-          <img
-            src={tourData.data[index].pictures[0]}
-            alt=""
-            className="tour-data-img"
-          />
+          <div style={{ display: " flex", justifyContent: "center" }}>
+            <img
+              src={tourData.data[index].pictures[0]}
+              alt=""
+              className="tour-data-img"
+            />{" "}
+          </div>
           <div className="tourist-card-buttons">
             <button className="card-book-button">
               <a href={tourData.data[index].bookingLink}>Book</a>

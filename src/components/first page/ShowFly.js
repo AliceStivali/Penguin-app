@@ -1,9 +1,15 @@
-import { color } from "@mui/system";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { checkbox } from "@material-tailwind/react";
 
 function ShowFly(data, toIataCode) {
+  let today = new Date().toISOString().split("T")[0];
+  // const dd = String(today.getDate()).padStart(2, "0");
+  // const mm = String(today.getMonth() + 1).padStart(2, "0");
+  // const yyyy = today.getFullYear();
+  // today = mm + "/" + dd + "/" + yyyy;
+
+  console.log(today);
+
   const [flyData, setFlyData] = useState({
     date: null,
     adult: 1,
@@ -14,11 +20,14 @@ function ShowFly(data, toIataCode) {
 
   function handleInputDate(event) {
     const value = event.target.value;
-    const checked = event.target.checked;
     const name = event.target.name;
+    const type = event.target.type;
     setFlyData({
       ...flyData,
-      [name]: name === "flightReturn" ? checked : value,
+      [name]:
+        type === "number"
+          ? Math.max(0, Math.min(100, Number(event.target.value)))
+          : value,
     });
   }
 
@@ -41,7 +50,12 @@ function ShowFly(data, toIataCode) {
             <div style={{ marginRight: "10px" }}>
               <div className="input-margin">Departure</div>
               <div className="passengers-input-container">
-                <input type="date" name="date" onChange={handleInputDate} />
+                <input
+                  type="date"
+                  name="date"
+                  min={today}
+                  onChange={handleInputDate}
+                />
               </div>
             </div>
             <div>
@@ -58,6 +72,7 @@ function ShowFly(data, toIataCode) {
                 <input
                   type="date"
                   name="dateReturn"
+                  min={flyData.date}
                   onChange={handleInputDate}
                   disabled={!flightReturn && true}
                 />
@@ -75,6 +90,7 @@ function ShowFly(data, toIataCode) {
                   type="number"
                   name="adult"
                   id="adult"
+                  value={flyData.adult}
                   className="passengers-input"
                   onChange={handleInputDate}
                 />
@@ -95,6 +111,7 @@ function ShowFly(data, toIataCode) {
                   type="number"
                   name="child"
                   id="child"
+                  value={flyData.child}
                   className="passengers-input"
                   onChange={handleInputDate}
                 />
