@@ -29,7 +29,7 @@ export function News() {
 
             {data && 
                         <div> 
-                            <p style={{paddingLeft: '5rem', paddingTop: '0.7rem'}}>What's new in {data.user_input.q}</p>
+                            <p style={{display: "flex", justifyContent: "center", paddingTop: '0.7rem'}}>What's new in {data.user_input.q}</p>
                         <div className="news-container" key={(data.articles[i].title)}>
                             <p style={{color:'black', paddingLeft:'0.5rem', paddingTop:'0.5rem'}}>{data.articles[i].title}</p>
                         </div>
