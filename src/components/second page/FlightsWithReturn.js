@@ -18,101 +18,115 @@ export function FlightsWithReturn(data) {
 
   return (
     <div className="single-flight-container">
-      <div style={{ width: "100%" }}>
-        <div style={{ width: "100%", display: "flex", alignItems: "center" }}>
-          <div>
-            <img
-              src={`../company-logos/${company}.jpg`}
-              alt={`${company}`}
-              style={{ width: "50px", borderRadius: "50%" }}
-            />
-          </div>
-          <div style={{ width: "85%", marginLeft: "1rem" }}>
-            <div className="flights-departure">
-              <div>
-                <img
-                  src="./plane-dep.png"
-                  alt="dep"
-                  style={{ width: "50px" }}
-                />
-              </div>
-              <div>{dep.iataCode}</div>
-              <div>{depDate}</div>
-              <div>{depTime}</div>
+      <div className="return-flex-container">
+        <div style={{ width: "100%" }}>
+          <div style={{ width: "100%", display: "flex", alignItems: "center" }}>
+            <div className="company-img">
+              <img
+                src={`../company-logos/${company}.jpg`}
+                alt={`${company}`}
+                style={{ width: "50px", borderRadius: "50%" }}
+              />
             </div>
-            <div className="flights-arrival">
-              <div>
-                <img
-                  src="./plane-arr.png"
-                  alt="arr"
-                  style={{ width: "50px" }}
-                />
+            <div style={{ width: "85%", marginLeft: "1rem" }}>
+              <div className="flights-departure">
+                <div>
+                  <img
+                    src="./plane-dep.png"
+                    alt="dep"
+                    style={{ width: "50px" }}
+                  />
+                </div>
+                <div>{dep.iataCode}</div>
+                <div>{depDate}</div>
+                <div>{depTime}</div>
               </div>
-              <div>{arr.iataCode}</div>
-              <div>{arrDate}</div>
-              <div>{arrTime}</div>
+              <div className="flights-arrival">
+                <div>
+                  <img
+                    src="./plane-arr.png"
+                    alt="arr"
+                    style={{ width: "50px" }}
+                  />
+                </div>
+                <div>{arr.iataCode}</div>
+                <div>{arrDate}</div>
+                <div>{arrTime}</div>
+              </div>
+            </div>
+            <div style={{ alignSelf: "center", marginLeft: "20px" }}>
+              {duration}
             </div>
           </div>
-          <div style={{ alignSelf: "center", marginLeft: "20px" }}>
-            {duration}
+
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              marginTop: "30px",
+              alignItems: "center",
+            }}
+          >
+            <div className="company-img">
+              <img
+                src={`../company-logos/${company}.jpg`}
+                alt={`${company}`}
+                style={{ width: "50px", borderRadius: "50%" }}
+              />
+            </div>
+            <div style={{ width: "85%", marginLeft: "1rem" }}>
+              <div className="flights-departure">
+                <div>
+                  <img
+                    src="./plane-dep.png"
+                    alt="dep"
+                    style={{ width: "50px" }}
+                  />
+                </div>
+                <div>{dep.iataCode}</div>
+                <div>{depDate}</div>
+                <div>{depTime}</div>
+              </div>
+              <div className="flights-arrival">
+                <div>
+                  <img
+                    src="./plane-arr.png"
+                    alt="arr"
+                    style={{ width: "50px" }}
+                  />
+                </div>
+                <div>{arr.iataCode}</div>
+                <div>{arrDate}</div>
+                <div>{arrTime}</div>
+              </div>
+            </div>
+            <div style={{ alignSelf: "center", marginLeft: "20px" }}>
+              {duration}
+            </div>
           </div>
         </div>
 
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            marginTop: "30px",
-            alignItems: "center",
-          }}
-        >
+        <div className="flight-details">
+          <div style={{ fontSize: "25px" }}>{price}€</div>
           <div>
-            <img
-              src={`../company-logos/${company}.jpg`}
-              alt={`${company}`}
-              style={{ width: "50px", borderRadius: "50%" }}
-            />
-          </div>
-          <div style={{ width: "85%", marginLeft: "1rem" }}>
-            <div className="flights-departure">
-              <div>
-                <img
-                  src="./plane-dep.png"
-                  alt="dep"
-                  style={{ width: "50px" }}
-                />
-              </div>
-              <div>{dep.iataCode}</div>
-              <div>{depDate}</div>
-              <div>{depTime}</div>
-            </div>
-            <div className="flights-arrival">
-              <div>
-                <img
-                  src="./plane-arr.png"
-                  alt="arr"
-                  style={{ width: "50px" }}
-                />
-              </div>
-              <div>{arr.iataCode}</div>
-              <div>{arrDate}</div>
-              <div>{arrTime}</div>
-            </div>
-          </div>
-          <div style={{ alignSelf: "center", marginLeft: "20px" }}>
-            {duration}
+            <button className="card-book-button flights-button">
+              Book <br />
+              now
+            </button>
           </div>
         </div>
       </div>
-
-      <div className="flight-details">
-        <div style={{ fontSize: "25px" }}>{price}€</div>
-        <div>
-          <button className="card-book-button">
-            Book <br />
-            now
-          </button>
-        </div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <button className="flights-button-mobile search-button">
+          Book now
+        </button>
       </div>
     </div>
   );

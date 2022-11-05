@@ -9,7 +9,9 @@ function useFetchTour() {
   );
   console.log(cityData);
   const { data, error } = useSWR(
-    `https://test.api.amadeus.com/v1/shopping/activities?latitude=${cityData._geoloc.lat}&longitude=${cityData._geoloc.lng}&radius=20`
+    cityData._geoloc
+      ? `https://test.api.amadeus.com/v1/shopping/activities?latitude=${cityData._geoloc.lat}&longitude=${cityData._geoloc.lng}&radius=20`
+      : null
   );
 
   return {

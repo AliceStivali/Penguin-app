@@ -19,14 +19,14 @@ export function Flights(data) {
     data && (
       <div className="single-flight-container">
         <div className="flight-flex-container" style={{ alignItems: "center" }}>
-          <div>
+          <div className="company-img">
             <img
               src={`../company-logos/${company}.jpg`}
               alt={`${company}`}
               style={{ width: "50px", borderRadius: "50%" }}
             />
           </div>
-          <div style={{ width: "70%", marginLeft: "1rem" }}>
+          <div className="dep-arr-container">
             <div className="flights-departure">
               <div>
                 <img

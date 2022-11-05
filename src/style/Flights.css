@@ -17,6 +17,14 @@
   justify-content: space-between;
   align-items: center;
 }
+.return-flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.dep-arr-container {
+  width: 70%;
+  margin-left: 1rem;
+}
 .flights-departure {
   display: flex;
   border-bottom: 1px solid black;
@@ -36,7 +44,7 @@
 }
 .flights-button-mobile {
   display: none;
-  width: 90%;
+  width: 70%;
   margin-bottom: 0.5rem;
 }
 @media only screen and (max-width: 600px) {
@@ -45,5 +53,22 @@
   }
   .flights-button-mobile {
     display: block;
+  }
+  .company-img {
+    display: none;
+  }
+  .flight-flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .flight-details {
+    width: 100%;
+    flex-direction: column;
+  }
+  .dep-arr-container {
+    margin-left: 0;
+  }
+  .return-flex-container {
+    flex-wrap: wrap;
   }
 }

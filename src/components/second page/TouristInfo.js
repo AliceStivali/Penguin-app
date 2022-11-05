@@ -4,10 +4,13 @@ import "../../style/TouristInfo.css";
 
 export function TouristInfo() {
   const [index, setIndex] = useState(0);
+  const { tourData, tourError, tourLoading } = useFetchTour();
 
   function changeIndexForward() {
-    if (tourData) {
+    if (index + 1 <= 3) {
       setIndex(index + 1);
+    } else {
+      setIndex(0);
     }
   }
   function changeIndexBack() {
@@ -16,12 +19,10 @@ export function TouristInfo() {
     }
   }
 
-  const { tourData, tourError, tourLoading } = useFetchTour();
-
   return (
     <div className="tourist-info">
-      {tourLoading && <h3>Caricamento...</h3>}
-      {tourError && <h3> C'è stato un errore</h3>}
+      {tourLoading && <h3>Loading...</h3>}
+      {tourError && <h3>There has been an error...</h3>}
       {tourData && (
         <div>
           <h6>{tourData.data[index].name}</h6>
@@ -54,6 +55,9 @@ export function TouristInfo() {
             </div>
           </div>
         </div>
+      )}
+      {tourData && tourData.meta.count === 0 && (
+        <h1 style={{ color: "white" }}>No tours available!</h1>
       )}
     </div>
   );

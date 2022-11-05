@@ -28,6 +28,9 @@ export function FlightsContainer() {
       {flyList &&
         dateReturn !== "null" &&
         flyList.data.map((item) => <FlightsWithReturn data={item} />)}
+      {flyList && flyList.meta.count === 0 && (
+        <h1 style={{ color: "white" }}>No flights available!</h1>
+      )}
     </div>
   );
 }
