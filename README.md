@@ -4,7 +4,7 @@
 Un search engine di voli e booking, creato da un team di 4 persone come progetto 
 per develhope.co
 
-![](https://i.ibb.co/Y8XKxM6/pingu-logo.png=20x)
+![](https://i.ibb.co/Y8XKxM6/pingu-logo.png =100px)
 
 ##  Organizzazione e metodo 🗄️
 
