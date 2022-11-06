@@ -19,8 +19,8 @@ per stare dentro i tempi prefissati dalla milestone
 ##  Design System && Atomic Design 🎨
 
 Il design del sito e l'atomic design sono stati ideati su Figma.com in cui abbiamo 
-diviso il progetto in più parti: Desktop, Mobile. Inoltre sono stati creati
-i componenti del Atomic Design 
+diviso il progetto in due parti: Desktop e Mobile. 
+Inoltre sono stati creati i componenti del Atomic Design 
 
 
 ## Autori 👩‍💻👨‍💻
