@@ -24,10 +24,10 @@ export function FlightsContainer() {
       {flyLoading && <h2>Loading...</h2>}
       {flyList &&
         dateReturn == "null" &&
-        flyList.data.map((item) => <Flights data={item} />)}
+        flyList.data.map((item, index) => <Flights data={item} key={index} />)}
       {flyList &&
         dateReturn !== "null" &&
-        flyList.data.map((item) => <FlightsWithReturn data={item} />)}
+        flyList.data.map((item, index) => <FlightsWithReturn data={item} key={index} />)}
       {flyList && flyList.meta.count === 0 && (
         <h1 style={{ color: "white" }}>No flights available!</h1>
       )}

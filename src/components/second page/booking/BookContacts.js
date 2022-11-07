@@ -25,7 +25,6 @@ export function BookContacts() {
         <input type="text" name="surname"></input>
         <div>Email</div>
         <input type="email" name="email"></input>
-        <button type="submit">Next step</button>
       </form>
     </div>
   );

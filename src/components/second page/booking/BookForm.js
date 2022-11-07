@@ -9,7 +9,8 @@ import { BookContacts } from "./BookContacts";
 import { PassengersDetails } from "./PassengersDetails";
 import { BillingInfo } from "./BillingInfo";
 
-const steps = [<PassengersDetails />, <BookContacts />, <BillingInfo />];
+const label = ['1','2','3']
+const steps = [<PassengersDetails/>, <BookContacts/>, <BillingInfo/>  ]
 
 export function BookForm() {
   const [activeStep, setActiveStep] = useState(0);
@@ -62,9 +63,9 @@ export function BookForm() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+<Box sx={{ width: '100%' }}>
       <Stepper nonLinear activeStep={activeStep}>
-        {steps.map((label, index) => (
+        {label.map((label, index) => (
           <Step key={label} completed={completed[index]}>
             <StepButton color="inherit" onClick={handleStep(index)}>
               {label}
@@ -83,11 +84,14 @@ export function BookForm() {
               <Button onClick={handleReset}>Reset</Button>
             </Box>
           </Fragment>
-        ) : (
+         ) : (
           <Fragment>
-            <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
-              Step {activeStep + 1}
+      
+          <Typography sx={{ mt: 2, mb: 1, py: 1 }}>
+           { steps[activeStep + 0]}
             </Typography>
+            
+
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
                 color="inherit"

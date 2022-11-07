@@ -30,23 +30,28 @@ export function PassengersDetails() {
         <div>Birthday</div>
         <input type="date" name="birthday"></input>
         <div>Document type</div>
-        <input type="select" name="documentType"></input>
+        <select name="documentType">
+          <option>Id Card</option>
+          <option>Passport</option>
+        </select>
         <div>Document number</div>
         <input type="text" name="documentNumber"></input>
         <div>Luggage</div>
-        <input type="select" name="luggage"></input>
+        <select name="luggage">
+          <option>Cabin</option>
+          <option>Checked</option>
+        </select>
         <div>Class</div>
-        <input type="select" name="class">
+        <select name="class">
           <option>Economy</option>
           <option>First class</option>
-        </input>
+        </select>
         <div>Seat preference</div>
-        <input type="select" name="seat">
+        <select name="seat">
           <option>Aisle</option>
           <option>Middle</option>
           <option>Window</option>
-        </input>
-        <button>Next step</button>
+        </select>
       </form>
     </div>
   );

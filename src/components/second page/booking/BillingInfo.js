@@ -28,7 +28,6 @@ export function BillingInfo() {
         <input type="number" min="100" max="999" required name="cvv"></input>
         <div>Expiration date</div>
         <input type="date" min={today} name="expiration"></input>
-        <button onSubmit={handleInputChange}>Confirm and book</button>
       </form>
     </div>
   );
