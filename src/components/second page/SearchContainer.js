@@ -17,7 +17,10 @@ export function SearchContainer() {
       {showSearch && <InputAirport />}
       {!showSearch && (
         <div style={{ display: "flex", alignItems: "center" }}>
-          <button className="search-button" onClick={handleNewSearch}>
+          <button
+            className="search-button reduced-search-button"
+            onClick={handleNewSearch}
+          >
             New search
           </button>
         </div>

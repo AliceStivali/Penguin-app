@@ -26,3 +26,15 @@ body {
   margin-top: 8rem;
   z-index: -999;
 }
+
+@media only screen and (max-width: 600px) {
+  .main_hero_secondPage {
+    display: none;
+  }
+  .main-hero-smartphone {
+    display: block;
+    position: absolute;
+    z-index: -999;
+    top: 6rem;
+  }
+}

@@ -1,5 +1,4 @@
 .RS-container {
-  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 33px;
   display: flex;
   padding: 1rem;
@@ -34,10 +33,40 @@
   align-items: center;
 }
 @media only screen and (max-width: 600px) {
+  .search-container {
+    width: 80%;
+  }
   .RS-container {
     width: 100%;
+    flex-wrap: wrap;
   }
   .input-field {
     padding: 5px;
+    min-width: 5rem;
+  }
+  .RS-input-1 {
+    border-radius: 18px 0 0 0;
+  }
+  .RS-input-2 {
+    border-radius: 0;
+  }
+  .RS-input-3 {
+    border-radius: 0 18px 0 0;
+  }
+  .RS-input-4 {
+    border-radius: 0 0 0 18px;
+  }
+  .RS-input-5 {
+    border-radius: 0;
+    justify-content: space-around;
+  }
+  .RS-input-6 {
+    border-radius: 0 0 18px 0;
+    justify-content: space-around;
+  }
+  .reduced-search-button {
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 1rem;
   }
 }

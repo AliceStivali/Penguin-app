@@ -9,7 +9,7 @@
 .single-flight-container {
   background-color: var(--penguinLightBlue);
   border-radius: 5px;
-  padding: 0 0.5rem;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 .flight-flex-container {

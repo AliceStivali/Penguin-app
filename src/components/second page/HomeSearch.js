@@ -16,6 +16,11 @@ export function HomeSearch() {
         className="main_hero_secondPage"
         alt="fjord"
       />
+      <img
+        src="../../main-hero-small.jpeg"
+        alt="fjord-small"
+        className="main-hero-smartphone"
+      />
       <FlightsContainer />
       <CardContainer />
       <Footer />
