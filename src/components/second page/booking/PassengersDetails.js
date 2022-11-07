@@ -19,6 +19,7 @@ export function PassengersDetails() {
       [name]: value,
     });
   }
+
   return (
     <div>
       <form onSubmit={handleInputChange}>
