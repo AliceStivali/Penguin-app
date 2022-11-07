@@ -1,6 +1,24 @@
 // import data from "./flyData";
 import "../../style/Flights.css";
 
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import { useState } from "react";
+import { BookForm } from "./booking/BookForm";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 export function Flights(data) {
   const dep = data.data.itineraries[0].segments[0].departure;
   const arr = data.data.itineraries[0].segments[0].arrival;
@@ -14,6 +32,10 @@ export function Flights(data) {
   const depTime = dep.at.slice(11, -3);
   const arrTime = dep.at.slice(11, -3);
   const company = data.data.validatingAirlineCodes[0];
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     data && (
@@ -56,10 +78,32 @@ export function Flights(data) {
             <div>{duration}</div>
             <div style={{ fontSize: "25px" }}>{price}€</div>
             <div>
-              <button className="card-book-button flights-button">
+              <button
+                className="card-book-button flights-button"
+                onClick={handleOpen}
+              >
                 Book <br />
                 now
               </button>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Typography
+                    id="modal-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    Booking form
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    <BookForm />
+                  </Typography>
+                </Box>
+              </Modal>
             </div>
           </div>
         </div>
@@ -71,7 +115,10 @@ export function Flights(data) {
             justifyContent: "center",
           }}
         >
-          <button className="flights-button-mobile search-button">
+          <button
+            className="flights-button-mobile search-button"
+            onClick={handleOpen}
+          >
             Book now
           </button>
         </div>

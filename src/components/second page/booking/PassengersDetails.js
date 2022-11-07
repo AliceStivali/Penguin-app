@@ -1,7 +1,27 @@
+import { useState } from "react";
+
 export function PassengersDetails() {
+  const [passengersData, setPassengersData] = useState({
+    name: null,
+    surname: null,
+    birthday: null,
+    documentType: null,
+    documentNumber: null,
+    luggage: null,
+    class: null,
+  });
+  function handleInputChange(event) {
+    event.preventdefault();
+    const value = event.target.value;
+    const name = event.target.name;
+    setPassengersData({
+      ...passengersData,
+      [name]: value,
+    });
+  }
   return (
     <div>
-      <form>
+      <form onSubmit={handleInputChange}>
         <div>Name</div>
         <input type="text" name="name"></input>
         <div>Surname</div>
@@ -9,9 +29,9 @@ export function PassengersDetails() {
         <div>Birthday</div>
         <input type="date" name="birthday"></input>
         <div>Document type</div>
-        <input type="select" name="document-type"></input>
+        <input type="select" name="documentType"></input>
         <div>Document number</div>
-        <input type="text" name="document-number"></input>
+        <input type="text" name="documentNumber"></input>
         <div>Luggage</div>
         <input type="select" name="luggage"></input>
         <div>Class</div>
@@ -25,6 +45,7 @@ export function PassengersDetails() {
           <option>Middle</option>
           <option>Window</option>
         </input>
+        <button>Next step</button>
       </form>
     </div>
   );

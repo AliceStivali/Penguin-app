@@ -3,12 +3,6 @@ import { Link } from "react-router-dom";
 
 function ShowFly(data, toIataCode) {
   let today = new Date().toISOString().split("T")[0];
-  // const dd = String(today.getDate()).padStart(2, "0");
-  // const mm = String(today.getMonth() + 1).padStart(2, "0");
-  // const yyyy = today.getFullYear();
-  // today = mm + "/" + dd + "/" + yyyy;
-
-  console.log(today);
 
   const [flyData, setFlyData] = useState({
     date: null,
