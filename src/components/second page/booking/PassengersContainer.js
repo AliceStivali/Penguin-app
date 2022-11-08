@@ -13,7 +13,6 @@ export function PassengersContainer(childToParent) {
   const [completed, setCompleted] = useState({});
   const steps = [];
 
-  childToParent(true);
 
   function passengerNumber() {
     for (let index = 0; index < passengers; index++) {

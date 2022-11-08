@@ -22,7 +22,6 @@ export function BookForm() {
     <BillingInfo />,
   ];
 
-  console.log(childToParent);
   function childToParent(finish) {
     setShowButtons(finish);
   }
