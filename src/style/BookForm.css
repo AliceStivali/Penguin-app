@@ -1,0 +1,12 @@
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: var(--penguinOrange) !important;
+}
+.book-modal-button {
+  color: var(--penguinOrange) !important;
+}
+.book-form-input {
+  border: 1px solid var(--penguinLightBlue);
+  border-radius: 1rem;
+  margin: 5px 0;
+  padding: 4px;
+}

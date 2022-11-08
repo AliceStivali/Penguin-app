@@ -1,4 +1,3 @@
-// import data from "./flyData";
 import "../../style/Flights.css";
 
 import Box from "@mui/material/Box";
@@ -13,6 +12,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
+  height: "fit-content",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -86,6 +86,7 @@ export function Flights(data) {
                 now
               </button>
               <Modal
+                sx={{ overflow: "scroll", height: "100%" }}
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"

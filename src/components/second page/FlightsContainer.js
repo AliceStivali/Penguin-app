@@ -15,8 +15,6 @@ export function FlightsContainer() {
     dateReturn
   );
 
-  // flyList &&
-  // console.log(flyList.data[0])
   console.log(flyList);
   return (
     <div className="rounded-3xl container mx-auto flights-container">
@@ -27,7 +25,9 @@ export function FlightsContainer() {
         flyList.data.map((item, index) => <Flights data={item} key={index} />)}
       {flyList &&
         dateReturn !== "null" &&
-        flyList.data.map((item, index) => <FlightsWithReturn data={item} key={index} />)}
+        flyList.data.map((item, index) => (
+          <FlightsWithReturn data={item} key={index} />
+        ))}
       {flyList && flyList.meta.count === 0 && (
         <h1 style={{ color: "white" }}>No flights available!</h1>
       )}
