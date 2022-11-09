@@ -130,7 +130,7 @@ export function FlightsWithReturn(data) {
                   />
                 </div>
                 <div className="flights-city-name">
-                  >{arr.iataCode} - {cityName.arrCity.name}
+                  {arr.iataCode} - {cityName.arrCity.name}
                 </div>
                 <div>{arrDate}</div>
                 <div>{arrTime}</div>
