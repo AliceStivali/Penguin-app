@@ -65,13 +65,7 @@ export function FlightsWithReturn(data) {
                     style={{ width: "50px" }}
                   />
                 </div>
-                <div
-                  style={{
-                    width: "13rem",
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
+                <div className="flights-city-name">
                   {dep.iataCode} - {cityName.depCity.name}
                 </div>
                 <div>{depDate}</div>
@@ -85,13 +79,7 @@ export function FlightsWithReturn(data) {
                     style={{ width: "50px" }}
                   />
                 </div>
-                <div
-                  style={{
-                    width: "13rem",
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
+                <div className="flights-city-name">
                   {arr.iataCode} - {cityName.arrCity.name}
                 </div>
                 <div>{arrDate}</div>
@@ -127,13 +115,7 @@ export function FlightsWithReturn(data) {
                     style={{ width: "50px" }}
                   />
                 </div>
-                <div
-                  style={{
-                    width: "13rem",
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
+                <div className="flights-city-name">
                   {dep.iataCode} - {cityName.depCity.name}
                 </div>
                 <div>{depDate}</div>
@@ -147,14 +129,8 @@ export function FlightsWithReturn(data) {
                     style={{ width: "50px" }}
                   />
                 </div>
-                <div
-                  style={{
-                    width: "13rem",
-                    display: "flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  {arr.iataCode} - {cityName.arrCity.name}
+                <div className="flights-city-name">
+                  >{arr.iataCode} - {cityName.arrCity.name}
                 </div>
                 <div>{arrDate}</div>
                 <div>{arrTime}</div>

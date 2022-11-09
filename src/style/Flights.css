@@ -44,6 +44,11 @@
   align-items: center;
   justify-content: space-around;
 }
+.flights-city-name {
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+}
 .flights-button-mobile {
   display: none;
   width: 70%;
@@ -72,5 +77,11 @@
   }
   .return-flex-container {
     flex-wrap: wrap;
+  }
+  .dep-arr-container {
+    width: 100%;
+  }
+  .flights-city-name {
+    width: fit-content;
   }
 }
