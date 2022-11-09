@@ -13,9 +13,9 @@ body {
 .home_container {
   display: flex;
   height: 100vh;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   gap: 5rem;
 }
 

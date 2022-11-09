@@ -23,7 +23,7 @@ export function TouristInfo() {
     <div className="tourist-info">
       {tourLoading && <h3>Loading...</h3>}
       {tourError && <h3>There has been an error...</h3>}
-      {tourData && (
+      {tourData && tourData.meta.count !== 0 && (
         <div>
           <h6>{tourData.data[index].name}</h6>
           <div style={{ display: " flex", justifyContent: "center" }}>
@@ -31,7 +31,7 @@ export function TouristInfo() {
               src={tourData.data[index].pictures[0]}
               alt=""
               className="tour-data-img"
-            />{" "}
+            />
           </div>
           <div className="tourist-card-buttons">
             <button className="card-book-button">
@@ -57,7 +57,20 @@ export function TouristInfo() {
         </div>
       )}
       {tourData && tourData.meta.count === 0 && (
-        <h1 style={{ color: "white" }}>No tours available!</h1>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <h3 style={{ color: "white" }}>No tours available!</h3>
+          <img
+            src="../../dead-penguin.gif"
+            alt="error"
+            style={{ width: "10rem" }}
+          />
+        </div>
       )}
     </div>
   );

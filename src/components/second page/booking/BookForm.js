@@ -15,16 +15,8 @@ const label = ["1", "2", "3"];
 export function BookForm() {
   const [activeStep, setActiveStep] = useState(0);
   const [completed, setCompleted] = useState({});
-  const [showButtons, setShowButtons] = useState(false);
-  const steps = [
-    <PassengersContainer childToParent={childToParent} />,
-    <BookContacts />,
-    <BillingInfo />,
-  ];
 
-  function childToParent(finish) {
-    setShowButtons(finish);
-  }
+  const steps = [<PassengersContainer />, <BookContacts />, <BillingInfo />];
 
   const totalSteps = () => {
     return steps.length;
@@ -85,11 +77,12 @@ export function BookForm() {
         {allStepsCompleted() ? (
           <Fragment>
             <Typography sx={{ mt: 2, mb: 1 }}>
-              All steps completed - you&apos;re finished
+              All steps completed - you&apos;re finished <br /> You will recieve
+              an email with booking details
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Box sx={{ flex: "1 1 auto" }} />
-              <Button onClick={handleReset}>Reset</Button>
+              {/* <Button onClick={handleReset}>Reset</Button> */}
             </Box>
           </Fragment>
         ) : (
@@ -98,41 +91,32 @@ export function BookForm() {
               {steps[activeStep]}
             </Typography>
 
-            {showButtons && (
-              <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-                <Button
-                  disabled={activeStep === 0}
-                  onClick={handleBack}
-                  sx={{ mr: 1 }}
-                  className="book-modal-button"
-                >
-                  Back
-                </Button>
-                <Box sx={{ flex: "1 1 auto" }} />
-                <Button
-                  onClick={handleNext}
-                  sx={{ mr: 1 }}
-                  className="book-modal-button"
-                >
-                  Next
-                </Button>
-                {activeStep !== steps.length &&
-                  (completed[activeStep] ? (
-                    <Typography
-                      variant="caption"
-                      sx={{ display: "inline-block" }}
-                    >
-                      Step {activeStep + 1} already completed
-                    </Typography>
-                  ) : (
-                    <Button onClick={handleComplete}>
-                      {completedSteps() === totalSteps() - 1
-                        ? "Finish"
-                        : "Complete Step"}
-                    </Button>
-                  ))}
-              </Box>
-            )}
+            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+              <Button
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                sx={{ mr: 1 }}
+                className="book-modal-button"
+              >
+                Back
+              </Button>
+              <Box sx={{ flex: "1 1 auto" }} />
+              {activeStep !== steps.length &&
+                (completed[activeStep] ? (
+                  <Typography
+                    variant="caption"
+                    sx={{ display: "inline-block" }}
+                  >
+                    Step {activeStep + 1} already completed
+                  </Typography>
+                ) : (
+                  <Button onClick={handleComplete}>
+                    {completedSteps() === totalSteps() - 1
+                      ? "Finish"
+                      : "Next Step"}
+                  </Button>
+                ))}
+            </Box>
           </Fragment>
         )}
       </div>

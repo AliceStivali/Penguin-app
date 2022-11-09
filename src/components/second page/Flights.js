@@ -1,5 +1,5 @@
 import "../../style/Flights.css";
-
+import airportList from "../first page/data.js";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
@@ -11,7 +11,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 450,
   height: "fit-content",
   bgcolor: "background.paper",
   border: "2px solid #000",
@@ -37,6 +37,11 @@ export function Flights(data) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const [cityName, setCityName] = useState({
+    depCity: airportList.find(({ iata_code }) => iata_code === dep.iataCode),
+    arrCity: airportList.find(({ iata_code }) => iata_code === arr.iataCode),
+  });
+
   return (
     data && (
       <div className="single-flight-container">
@@ -57,7 +62,15 @@ export function Flights(data) {
                   style={{ width: "50px" }}
                 />
               </div>
-              <div>{dep.iataCode}</div>
+              <div
+                style={{
+                  width: "13rem",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {dep.iataCode} - {cityName.depCity.name}
+              </div>
               <div>{depDate}</div>
               <div>{depTime}</div>
             </div>
@@ -69,7 +82,15 @@ export function Flights(data) {
                   style={{ width: "50px" }}
                 />
               </div>
-              <div>{arr.iataCode}</div>
+              <div
+                style={{
+                  width: "13rem",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {arr.iataCode} - {cityName.arrCity.name}
+              </div>
               <div>{arrDate}</div>
               <div>{arrTime}</div>
             </div>

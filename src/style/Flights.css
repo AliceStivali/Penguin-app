@@ -30,11 +30,13 @@
   border-bottom: 1px solid black;
   padding: 0.5rem;
   justify-content: space-between;
+  align-items: center;
 }
 .flights-arrival {
   display: flex;
   padding: 0.5rem;
   justify-content: space-between;
+  align-items: center;
 }
 .flight-details {
   width: 30%;

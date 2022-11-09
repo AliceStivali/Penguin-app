@@ -23,10 +23,21 @@ export function PassengerDetails() {
   return (
     <div>
       <form>
-        <div>Name</div>
-        <input type="text" name="name" className="book-form-input"></input>
-        <div>Surname</div>
-        <input type="text" name="surname" className="book-form-input"></input>
+        <div style={{ display: "flex", gap: "2rem", margin: "1rem 0" }}>
+          <div>
+            <div>Name</div>
+            <input type="text" name="name" className="book-form-input"></input>
+          </div>
+          <div>
+            <div>Surname</div>
+            <input
+              type="text"
+              name="surname"
+              className="book-form-input"
+            ></input>
+          </div>
+        </div>
+
         <div style={{ display: "flex", gap: "2rem", margin: "1rem 0" }}>
           <div>
             <div>Birthday</div>

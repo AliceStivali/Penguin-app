@@ -34,7 +34,7 @@ function InputAirport() {
                 (a, b) => -b.country.localeCompare(a.country)
               )}
               groupBy={(option) => option.country}
-              getOptionLabel={(option) => `${option.name},${option.city}`}
+              getOptionLabel={(option) => `${option.name}, ${option.city}`}
               renderInput={(params) => (
                 <TextField
                   {...params}

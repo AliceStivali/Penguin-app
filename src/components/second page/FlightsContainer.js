@@ -20,6 +20,7 @@ export function FlightsContainer() {
     <div className="rounded-3xl container mx-auto flights-container">
       <div className="flights-header">Flights</div>
       {flyLoading && <h2>Loading...</h2>}
+      {error && <img src="../../drunk-penguin.gif" alt="error" />}
       {flyList &&
         dateReturn == "null" &&
         flyList.data.map((item, index) => <Flights data={item} key={index} />)}

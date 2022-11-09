@@ -14,7 +14,7 @@
 .nav_orange {
   color: white;
   background: var(--penguinNavGradient);
-  width: 65rem;
+  width: 80%;
   height: 3rem;
   display: flex;
   align-items: center;
