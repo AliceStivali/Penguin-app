@@ -14,8 +14,8 @@ body {
 
 .home-container {
   display: flex;
-  /* height: 100vh; */
-  flex-wrap: wrap;
+  height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
@@ -61,5 +61,10 @@ body {
     position: absolute;
     z-index: -999;
     top: 6rem;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .home-container {
+    height: 100vh;
   }
 }
