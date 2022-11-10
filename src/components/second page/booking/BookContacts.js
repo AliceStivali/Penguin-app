@@ -18,6 +18,7 @@ export function BookContacts() {
 
   return (
     <div>
+      <h5>Booking contacts</h5>
       <form>
         <div>Name</div>
         <input type="text" name="name" className="book-form-input"></input>

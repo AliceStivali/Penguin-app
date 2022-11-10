@@ -19,6 +19,7 @@ export function BillingInfo() {
   // }
   return (
     <div>
+      <h5>Billing info</h5>
       <form>
         <div>Full name</div>
         <input type="text" name="fullName" className="book-form-input"></input>
