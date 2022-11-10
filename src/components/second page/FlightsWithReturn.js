@@ -31,9 +31,20 @@ export function FlightsWithReturn(data) {
   const depDate = dep.at.slice(0, 10);
   const arrDate = arr.at.slice(0, 10);
   const depTime = dep.at.slice(11, -3);
-  const arrTime = dep.at.slice(11, -3);
+  const arrTime = arr.at.slice(11, -3);
   const company = data.data.validatingAirlineCodes[0];
   console.log(company);
+
+  const returnDep = data.data.itineraries[1].segments[0].departure;
+  const returnArr = data.data.itineraries[1].segments[0].arrival;
+  const returnDuration = data.data.itineraries[1].segments[0].duration
+    .slice(2)
+    .toLowerCase();
+
+  const returnDepDate = returnDep.at.slice(0, 10);
+  const returnArrDate = returnArr.at.slice(0, 10);
+  const returnDepTime = returnDep.at.slice(11, -3);
+  const returnArrTime = returnArr.at.slice(11, -3);
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -116,10 +127,10 @@ export function FlightsWithReturn(data) {
                   />
                 </div>
                 <div className="flights-city-name">
-                  {dep.iataCode} - {cityName.depCity.name}
+                  {returnDep.iataCode} - {cityName.arrCity.name}
                 </div>
-                <div>{depDate}</div>
-                <div>{depTime}</div>
+                <div>{returnDepDate}</div>
+                <div>{returnDepTime}</div>
               </div>
               <div className="flights-arrival">
                 <div>
@@ -130,14 +141,14 @@ export function FlightsWithReturn(data) {
                   />
                 </div>
                 <div className="flights-city-name">
-                  {arr.iataCode} - {cityName.arrCity.name}
+                  {returnArr.iataCode} - {cityName.depCity.name}
                 </div>
-                <div>{arrDate}</div>
-                <div>{arrTime}</div>
+                <div>{returnArrDate}</div>
+                <div>{returnArrTime}</div>
               </div>
             </div>
             <div style={{ alignSelf: "center", marginLeft: "20px" }}>
-              {duration}
+              {returnDuration}
             </div>
           </div>
         </div>

@@ -55,7 +55,10 @@ export function News() {
       {data && i + 1 < articlesNumber && (
         <div>
           <div className="news-container" key={data.articles[i].title}>
-            <a href={data.articles[i].link} style={{ textDecoration: "none" }}>
+            <a
+              href={data.articles[i + 1].link}
+              style={{ textDecoration: "none" }}
+            >
               <p
                 style={{
                   color: "black",

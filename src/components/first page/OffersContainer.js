@@ -18,7 +18,7 @@ export function OffersContainer() {
               {" "}
               <span>€</span>48.<span>80</span>{" "}
             </p>
-            <p className="date_card">3 Nov - 5 Nov</p>
+            <p className="date_card">11 Nov - 15 Nov</p>
           </div>
           <img className="main_card_pic" src="madrid.jpg" alt="" />
         </div>
